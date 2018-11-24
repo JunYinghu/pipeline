@@ -25,7 +25,7 @@ public class runTest {
 
     @Test(priority = 0, description = "SDKpackage verification")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("This cases depends on OS")
+    @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify SDKpackage")
     public void testcase1() {
         verifiedSDKPackage verifiedPadk = new verifiedSDKPackage();
@@ -34,22 +34,23 @@ public class runTest {
 
     }
 
-    @Test
+    @Test(priority = 1,description = "Mephisto scan")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("The case to scan the whole folder from aritifitaor")
     public void testcase2() {
         System.out.println("i am here2");
         //  Reporter.log("iternv0oid0");
     }
 
-    @Test
+    @Test(priority = 1,description = "Binscope scan")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("The case to scan file one by one")
     public void testcase3() {
-
         System.out.println("i am here3");
-
     }
 
     @Test
     public void testcase4() {
-
         System.out.println("i am here4");
         //  Reporter.log("invode");
     }
