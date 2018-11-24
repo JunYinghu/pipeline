@@ -1,16 +1,17 @@
 package test.cicd.project;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+//@Listeners({TestListener.class})
+@Epic("Regression Tests")
+@Feature("SDKPackage Testing")
 public class runTest {
 
     private WebDriver driver;
