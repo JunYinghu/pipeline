@@ -1,5 +1,9 @@
 package test.cicd.project;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -20,7 +24,10 @@ public class runTest {
         driver.navigate().to("http://www.google.com");
     }
 
-    @Test
+    @Test(priority = 0,description = "SDKpackage verification")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("This cases depends on OS")
+    @Story("To verify SDKpackage")
     public void testcase1(){
         Assert.assertTrue(driver.getTitle().contains("Software sevelopment"));
 
