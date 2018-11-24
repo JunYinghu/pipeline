@@ -5,9 +5,8 @@ import io.qameta.allure.Step;
 
 public class verifiedSDKPackage {
 
-    @Step("login")
+    @Step("createFolder &DownloadHelper")
     public void createFoder(){
-
     System.err.println("i am testing");
     }
 
@@ -19,6 +18,16 @@ public class verifiedSDKPackage {
     @Step("Verify Version")
     public void verifyVersion(){
         System.err.println("i am testing");
+    }
+
+    @Step("Verify executable file")
+    public void verifyExecutable(){
+
+    }
+
+    @Step("return result")
+    public void returnResult(){
+
     }
 
 
