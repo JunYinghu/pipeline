@@ -22,15 +22,13 @@ public class runTest {
 
     @Test
     public void testcase1(){
-
-
         Assert.assertFalse(driver.getTitle().contains("Software Development"));
     }
 
     @Test
     public void testcase2(){
         System.out.println("i am here2");
-        Reporter.log("invoid");
+        Reporter.log("invoid0");
     }
 
     @Test
