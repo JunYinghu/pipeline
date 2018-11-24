@@ -22,7 +22,7 @@ public class runTest {
 
     @Test
     public void testcase1(){
-        Assert.assertFalse(driver.getTitle().contains("Software development"));
+        Assert.assertFalse(driver.getTitle().contains("Software sevelopment"));
 
     }
 
