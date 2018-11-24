@@ -24,26 +24,26 @@ public class runTest {
     public void testcase1(){
 
 
-        Assert.assertTrue(driver.getTitle().contains("Software Development"));
+        Assert.assertFalse(driver.getTitle().contains("Software Development"));
     }
 
     @Test
     public void testcase2(){
-        System.out.println("i am here");
-        Reporter.log("调用test2方法");
+        System.out.println("i am here2");
+        Reporter.log("invoid");
     }
 
     @Test
     public void testcase3(){
 
-        System.out.println("i am here");
+        System.out.println("i am here3");
 
     }
 
     @Test
     public void testcase4(){
 
-        System.out.println("i am here");
-        Reporter.log("调用test2方法");
+        System.out.println("i am here4");
+        Reporter.log("invode");
     }
 }
