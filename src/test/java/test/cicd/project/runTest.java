@@ -29,7 +29,7 @@ public class runTest {
     @Test
     public void testcase2(){
         System.out.println("i am here2");
-        Reporter.log("invoid0");
+        Reporter.log("inv0oid0");
     }
 
     @Test
