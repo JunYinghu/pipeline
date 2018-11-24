@@ -28,6 +28,8 @@ public class runTest {
     @Description("This cases depends on OS")
     @Story("To verify SDKpackage")
     public void testcase1() {
+        verifiedSDKPackage verifiedPadk = new verifiedSDKPackage();
+        verifiedPadk.createFoder();
         Assert.assertTrue(driver.getTitle().contains("Software sevelopment"));
 
     }

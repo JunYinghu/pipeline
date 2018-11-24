@@ -13,12 +13,12 @@ public class verifiedSDKPackage {
 
     @Step("Verify Structure")
     public void verifyStructure(){
-
+        System.err.println("i am testing");
     }
 
     @Step("Verify Version")
     public void verifyVersion(){
-
+        System.err.println("i am testing");
     }
 
 
