@@ -46,10 +46,10 @@ public class runTest {
     @Test(priority = 1,description = "testcase2")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan the whole folder from aritifitaor")
-    @Parameters({"testname","teststring"})
-    public void testcase2(@Optional ("hujun") String testname, @Optional("testingstring") String teststring) {
-        System.out.println(testname);
-        System.out.println(teststring);
+    @Parameters({"createdataName","testString"})
+    public void testcase2(@Optional("hujun") String createdataName, @Optional("testingstring") String testString) {
+        System.out.println(createdataName);
+        System.out.println(testString);
         System.out.println("i am here2");
         //  Reporter.log("iternv0oid0");
     }

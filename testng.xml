@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-    <parameter name="testname" value="${createdataName}"/>
-    <parameter name="teststring" value="${testString}"/>
+    <parameter name="createdataName" value="${createdataName}"/>
+    <parameter name="testString" value="${testString}"/>
 
     <test verbose="2" preserve-order="true" name="CICD tet">
         <classes>
