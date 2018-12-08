@@ -23,13 +23,14 @@ public class runTest {
         driver.navigate().to("http://www.google.com");
     }
 
-    @Test(priority = 0, description = "SDKpackage verification")
+    //@Test(priority = 0, description = "SDKpackage verification")
     @Severity(SeverityLevel.CRITICAL)
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify SDKpackage")
     public void testcase1() {
         verifiedSDKPackage verifiedPadk = new verifiedSDKPackage();
         verifiedPadk.createFoder();
+
         Assert.assertTrue(driver.getTitle().contains("Software sevelopment"));
 
     }

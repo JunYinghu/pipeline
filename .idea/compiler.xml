@@ -9,8 +9,5 @@
         <module name="TestForCICD" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="TestForCICD" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
