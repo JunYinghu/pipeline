@@ -4,9 +4,7 @@ import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -48,7 +46,9 @@ public class runTest {
     @Test(priority = 1,description = "testcase2")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan the whole folder from aritifitaor")
-    public void testcase2() {
+    @Parameters("testname")
+    public void testcase2(@Optional ("huju") String testname) {
+        System.out.println(testname);
         System.out.println("i am here2");
         //  Reporter.log("iternv0oid0");
     }
@@ -66,7 +66,8 @@ public class runTest {
         saveCsvAttachment();
     }
 
-    @Test
+
+
     @Attachment(value = "Sample csv attachment", type = "text/html")
     public byte[] saveCsvAttachment() throws URISyntaxException, IOException {
         return getSampleFile("index.html");
