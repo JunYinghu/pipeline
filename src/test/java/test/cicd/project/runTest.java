@@ -1,11 +1,15 @@
 package test.cicd.project;
 
 import io.qameta.allure.*;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.io.File;
+import java.io.IOException;
 
 
 @Epic("Regression Tests")
@@ -51,8 +55,16 @@ public class runTest {
     }
 
     @Test
-    public void testcase4() {
-        System.out.println("i am here4");
+    @Attachment(value = "HTML attachment",type = "text/html")
+    public byte[] appendLogAllure (File file) {
+        try{
+
+           return FileUtils.readFileToByteArray(file);
+        }
+        catch (IOException ignored){
+
+        }
+        return null;
         //  Reporter.log("invode");
     }
 }
