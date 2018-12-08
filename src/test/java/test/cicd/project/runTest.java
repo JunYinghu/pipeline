@@ -65,9 +65,9 @@ public class runTest {
     public void csvAttachmentTest() throws Exception {
         saveCsvAttachment();
     }
-    @Attachment(value = "Sample csv attachment", type = "text/csv")
+    @Attachment(value = "Sample csv attachment", type = "text/html")
     public byte[] saveCsvAttachment() throws URISyntaxException, IOException {
-        return getSampleFile("sample.csv");
+        return getSampleFile("index.html");
     }
 
 
@@ -78,6 +78,5 @@ public class runTest {
         }
         return Files.readAllBytes(Paths.get(resource.toURI()));
     }
-
 
 }
