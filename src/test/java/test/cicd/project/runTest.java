@@ -65,6 +65,8 @@ public class runTest {
     public void csvAttachmentTest() throws Exception {
         saveCsvAttachment();
     }
+
+    @Test
     @Attachment(value = "Sample csv attachment", type = "text/html")
     public byte[] saveCsvAttachment() throws URISyntaxException, IOException {
         return getSampleFile("index.html");
