@@ -1,17 +1,23 @@
 package test.cicd.project;
 
 import io.qameta.allure.*;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
+import static java.lang.String.format;
+import static org.testng.Assert.fail;
 
+//@Listeners({AllureListerner.class})
 @Epic("Regression Tests")
 @Feature("SDKPackage Testing")
 public class runTest {
@@ -54,17 +60,24 @@ public class runTest {
         System.out.println("i am here3");
     }
 
-    @Test
-    @Attachment(value = "HTML attachment",type = "text/html")
-    public byte[] appendLogAllure (File file) {
-        try{
 
-           return FileUtils.readFileToByteArray(file);
-        }
-        catch (IOException ignored){
-
-        }
-        return null;
-        //  Reporter.log("invode");
+    @Test(description = "CSV аттачмент")
+    public void csvAttachmentTest() throws Exception {
+        saveCsvAttachment();
     }
+    @Attachment(value = "Sample csv attachment", type = "text/csv")
+    public byte[] saveCsvAttachment() throws URISyntaxException, IOException {
+        return getSampleFile("sample.csv");
+    }
+
+
+    private byte[] getSampleFile(String fileName) throws IOException, URISyntaxException {
+        URL resource = getClass().getClassLoader().getResource(fileName);
+        if (resource == null) {
+            fail(format("Couldn't find resource '%s'", fileName));
+        }
+        return Files.readAllBytes(Paths.get(resource.toURI()));
+    }
+
+
 }
