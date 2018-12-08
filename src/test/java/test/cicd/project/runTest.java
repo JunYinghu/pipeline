@@ -47,7 +47,7 @@ public class runTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan the whole folder from aritifitaor")
     @Parameters({"createdataName","testString"})
-    public void testcase2(@Optional("hujun") String createdataName, @Optional("testingstring") String testString) {
+    public void testcaseparam(@Optional("hujun") String createdataName, @Optional("testingstring") String testString) {
         System.out.println(createdataName);
         System.out.println(testString);
         System.out.println("i am here2");
@@ -57,14 +57,17 @@ public class runTest {
    // @Test(priority = 1,description = "Binscope scan")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan file one by one")
-    public void testcase3() {
+    public void testcaseprint() {
         System.out.println("i am here3");
     }
 
-
-    @Test(description = "CSV аттачмент")
+    @Test(description = "CSV Attachment")
     public void csvAttachmentTest() throws Exception {
-        saveCsvAttachment();
+        int i=0;
+        while (i<5) {
+            saveCsvAttachment();
+        i++;
+        }
     }
 
 
