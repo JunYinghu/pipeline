@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-//@Listeners({TestListener.class})
+
 @Epic("Regression Tests")
 @Feature("SDKPackage Testing")
 public class runTest {
@@ -35,7 +35,7 @@ public class runTest {
 
     }
 
-    @Test(priority = 1,description = "Mephisto scan")
+    @Test(priority = 1,description = "testcase2")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan the whole folder from aritifitaor")
     public void testcase2() {
