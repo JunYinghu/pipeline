@@ -46,9 +46,10 @@ public class runTest {
     @Test(priority = 1,description = "testcase2")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan the whole folder from aritifitaor")
-    @Parameters("testname")
-    public void testcase2(@Optional ("hujun") String testname) {
+    @Parameters({"testname","teststring"})
+    public void testcase2(@Optional ("hujun") String testname, @Optional("testingstring") String teststring) {
         System.out.println(testname);
+        System.out.println(teststring);
         System.out.println("i am here2");
         //  Reporter.log("iternv0oid0");
     }
