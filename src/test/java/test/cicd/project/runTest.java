@@ -43,7 +43,7 @@ public class runTest {
         //  Reporter.log("iternv0oid0");
     }
 
-    @Test(priority = 1,description = "Binscope scan")
+   // @Test(priority = 1,description = "Binscope scan")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan file one by one")
     public void testcase3() {
