@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import test.cicd.project.Utili.SetGetParameter;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -15,13 +16,22 @@ import java.nio.file.Paths;
 import static java.lang.String.format;
 import static org.testng.Assert.fail;
 
-//@Listeners({AllureListerner.class})
 @Epic("Regression Tests")
 @Feature("SDKPackage Testing")
 public class runTest {
 
     private WebDriver driver;
+    private SetGetParameter setGetParameter;
 
+    @BeforeTest
+    @Parameters({"LoginUserName","LoginUserPassword","testString"})
+    public void setParameter(@Optional("hujun") String LoginUserName, @Optional("LoginUserPassword")String LoginUserPassword, @Optional("testingstring") String testString){
+        setGetParameter = new SetGetParameter();
+        setGetParameter.setLoginUser(LoginUserName);
+        setGetParameter.setLoginPassword(LoginUserPassword);
+        System.out.println(setGetParameter.getLoginPassword());
+        System.out.println(setGetParameter.getLoginUser());
+    }
     @BeforeTest
     public void setupTest() {
         System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
@@ -36,7 +46,7 @@ public class runTest {
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify SDKpackage")
     public void testcase1() {
-        verifiedSDKPackage verifiedPadk = new verifiedSDKPackage();
+        VerifiedPackage verifiedPadk = new VerifiedPackage();
         verifiedPadk.createFoder();
 
         Assert.assertTrue(driver.getTitle().contains("Software sevelopment"));
@@ -46,15 +56,15 @@ public class runTest {
     @Test(priority = 1,description = "testcaseparam")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan the whole folder from aritifitaor")
-    @Parameters({"createdataName","testString"})
-    public void testcaseparam(@Optional("hujun") String createdataName, @Optional("testingstring") String testString) {
-        System.out.println(createdataName);
-        System.out.println(testString);
-        System.out.println("i am here2");
-        //  Reporter.log("iternv0oid0");
+
+    public void testcaseparam() {
+        System.out.println(setGetParameter.getLoginPassword());
+        System.out.println(setGetParameter.getLoginUser());
+        
+
     }
 
-   // @Test(priority = 1,description = "Binscope scan")
+    // @Test(priority = 1,description = "Binscope scan")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan file one by one")
     public void testcaseprint() {
@@ -66,7 +76,7 @@ public class runTest {
         int i=0;
         while (i<5) {
             saveCsvAttachment();
-        i++;
+            i++;
         }
     }
 
@@ -87,3 +97,4 @@ public class runTest {
     }
 
 }
+

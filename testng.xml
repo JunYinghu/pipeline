@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <parameter name="createdataName" value="${LoginUser}"/>
-    <parameter name="createdataName" value="${Password}"/>
+    <parameter name="LoginUserName" value="${LoginUser}"/>
+    <parameter name="LoginUserPassword" value="${Password}"/>
     <parameter name="testString" value="${testString}"/>
     <test verbose="2" preserve-order="true" name="D:/pipeline/src/test/java/test/cicd/project/runTest.java">
         <classes>

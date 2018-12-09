@@ -3,7 +3,7 @@ package test.cicd.project;
 
 import io.qameta.allure.Step;
 
-public class verifiedSDKPackage {
+public class VerifiedPackage {
 
     @Step("createFolder &DownloadHelper")
     public void createFoder(){
