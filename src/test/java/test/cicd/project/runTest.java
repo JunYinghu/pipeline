@@ -23,8 +23,8 @@ public class runTest {
     private WebDriver driver;
     private SetGetParameter setGetParameter;
 
-    @BeforeTest
-    @Parameters({"LoginUserName","LoginUserPassword","testString"})
+    //@BeforeTest
+    /*@Parameters({"LoginUserName","LoginUserPassword","testString"})
     public void setParameter(@Optional("hujun") String LoginUserName, @Optional("LoginUserPassword")String LoginUserPassword, @Optional("testingstring") String testString){
         setGetParameter = new SetGetParameter();
         setGetParameter.setLoginUser(LoginUserName);
@@ -32,6 +32,7 @@ public class runTest {
         System.out.println(setGetParameter.getLoginPassword());
         System.out.println(setGetParameter.getLoginUser());
     }
+    */
     @BeforeTest
     public void setupTest() {
         System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
@@ -60,7 +61,7 @@ public class runTest {
     public void testcaseparam() {
         System.out.println(setGetParameter.getLoginPassword());
         System.out.println(setGetParameter.getLoginUser());
-        
+
 
     }
 
