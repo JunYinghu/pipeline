@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import sun.misc.BASE64Decoder;
 import test.cicd.project.Utili.SetGetParameter;
 
 import java.io.IOException;
@@ -23,16 +24,20 @@ public class runTest {
     private WebDriver driver;
     private SetGetParameter setGetParameter;
 
-    //@BeforeTest
-    /*@Parameters({"LoginUserName","LoginUserPassword","testString"})
-    public void setParameter(@Optional("hujun") String LoginUserName, @Optional("LoginUserPassword")String LoginUserPassword, @Optional("testingstring") String testString){
+    @BeforeTest
+    @Parameters({"testString"})
+    public void setParameter(@Optional("testingstring") String testString) throws Exception {
         setGetParameter = new SetGetParameter();
-        setGetParameter.setLoginUser(LoginUserName);
-        setGetParameter.setLoginPassword(LoginUserPassword);
-        System.out.println(setGetParameter.getLoginPassword());
+        setGetParameter.setLoginUser("svp_p_sdkuser");
+        setGetParameter.setLoginPassword("OEI0Vll6emM=");
+        System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
         System.out.println(setGetParameter.getLoginUser());
     }
-    */
+
+    public String decryptBase64(String key) throws Exception{
+        byte result[] = (new BASE64Decoder()).decodeBuffer(key);
+        return new String(result);
+    }
     @BeforeTest
     public void setupTest() {
         System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
@@ -58,8 +63,8 @@ public class runTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan the whole folder from aritifitaor")
 
-    public void testcaseparam() {
-        System.out.println(setGetParameter.getLoginPassword());
+    public void testcaseparam() throws Exception {
+        System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
         System.out.println(setGetParameter.getLoginUser());
 
 
