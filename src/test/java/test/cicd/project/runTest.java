@@ -43,7 +43,7 @@ public class runTest {
 
     }
 
-    @Test(priority = 1,description = "testcase2")
+    @Test(priority = 1,description = "testcaseparam")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan the whole folder from aritifitaor")
     @Parameters({"createdataName","testString"})
