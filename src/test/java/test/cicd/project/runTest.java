@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import sun.misc.BASE64Decoder;
+import test.cicd.project.Utili.CreateEnvFile;
 import test.cicd.project.Utili.SetGetParameter;
 
 import java.io.IOException;
@@ -42,6 +43,11 @@ public class runTest {
     public String decryptBase64(String key) throws Exception{
         byte result[] = (new BASE64Decoder()).decodeBuffer(key);
         return new String(result);
+    }
+    @AfterTest
+    public void createpropFile(){
+        CreateEnvFile createprop = new CreateEnvFile();
+        createprop.createFile(setGetParameter.getEnv(),setGetParameter.getBuildNo(),setGetParameter.getBuildNo());
     }
     @BeforeTest
     public void setupTest() {
