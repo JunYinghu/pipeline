@@ -25,11 +25,16 @@ public class runTest {
     private SetGetParameter setGetParameter;
 
     @BeforeTest
-    @Parameters({"testString"})
-    public void setParameter(@Optional("testingstring") String testString) throws Exception {
+    @Parameters({"Env","BuildNo"})
+    public void setParameter(@Optional("testingstring") String Env , @Optional("testingBuildNo") String BuildNo) throws Exception {
         setGetParameter = new SetGetParameter();
         setGetParameter.setLoginUser("svp_p_sdkuser");
         setGetParameter.setLoginPassword("OEI0Vll6emM=");
+        setGetParameter.setBuildNo(BuildNo);
+        setGetParameter.getBuildNo();
+        setGetParameter.setENV(Env);
+        setGetParameter.getEnv();
+
         System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
         System.out.println(setGetParameter.getLoginUser());
     }

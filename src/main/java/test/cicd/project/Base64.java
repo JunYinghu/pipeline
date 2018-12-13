@@ -13,7 +13,6 @@ public class Base64 {
      */
     public static byte[] decryptBASE64(String key) throws Exception {
         return (new BASE64Decoder()).decodeBuffer(key);
-
     }
     public static String decryptBase64(String key) throws Exception{
         byte result[] = (new BASE64Decoder()).decodeBuffer(key);
@@ -31,7 +30,8 @@ public class Base64 {
     public static void main(String[] args) {
         String  str="8B4VYzzc";
         try {
-            String  result1= Base64.encryptBASE64(str.getBytes());
+            String  result1= Base64.encryptBASE64
+                    (str.getBytes());
             System.out.println("result1=====encryptBASE64=========="+result1);
             byte  result2[]= Base64.decryptBASE64(result1);
             String  str2=new String(result2);
