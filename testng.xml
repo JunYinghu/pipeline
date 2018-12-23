@@ -7,11 +7,11 @@
     <parameter name="buildUrl" value="${BuildNo}"/>
     <parameter name="testUrl" value="${TestUrl}"/>
 
-    <test verbose="2" preserve-order="true" name="D:/pipeline/src/test/java/test/cicd/project/runTest.java">
+    <test verbose="2" preserve-order="true" name="runTest">
         <classes>
             <class name="test.cicd.project.runTest">
                 <methods>
-                    <include name="testcaseparam"/>
+                    <include name="testParameter"/>
                     <include name="csvAttachmentTest"/>
                 </methods>
             </class>
