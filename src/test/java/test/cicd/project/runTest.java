@@ -67,6 +67,7 @@ public class runTest {
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify Url Title")
     @Issue("123")
+    @TmsLink("test-1")
     public void testcase1() {
         SoftAssert softAssertion = new SoftAssert();
         VerifiedPackage verifiedPadk = new VerifiedPackage();
@@ -81,7 +82,7 @@ public class runTest {
     @Test(priority = 1, description = "testParameter")
     @Severity(SeverityLevel.BLOCKER)
     @Description("To test Parameter")
-    @Link("http://www.google.com")
+    //@Link("http://www.google.com")
    // @Link(name = "allure",type = "mylink")
     @Issue("123")
     @TmsLink("test-1")
