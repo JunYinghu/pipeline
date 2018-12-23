@@ -66,6 +66,7 @@ public class runTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify Url Title")
+    @Issue("123")
     public void testcase1() {
         SoftAssert softAssertion = new SoftAssert();
         VerifiedPackage verifiedPadk = new VerifiedPackage();
