@@ -62,7 +62,7 @@ public class runTest {
         driver.navigate().to(setGetParameter.getBrowser());
     }
 
-    //@Test(priority = 0, description = "SDKpackage verification")
+    @Test(priority = 0, description = "Title verification")
     @Severity(SeverityLevel.CRITICAL)
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify Url Title")
