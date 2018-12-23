@@ -11,7 +11,7 @@
         <classes>
             <class name="test.cicd.project.runTest">
                 <methods>
-                    <include name="testParameter"/>
+                    <include name="testParam"/>
                     <include name="csvAttachmentTest"/>
                 </methods>
             </class>
