@@ -81,7 +81,7 @@ public class runTest {
     @Severity(SeverityLevel.BLOCKER)
     @Description("To test Parameter")
     @Link("http://www.google.com")
-    @Link(name = "allure",type = "mylink")
+   // @Link(name = "allure",type = "mylink")
     @Issue("123")
     @TmsLink("test-1")
     public void testParam() throws Exception {
