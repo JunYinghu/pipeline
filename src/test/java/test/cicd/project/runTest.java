@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 import sun.misc.BASE64Decoder;
 import test.cicd.project.Utili.CreateEnvFile;
 import test.cicd.project.Utili.SetGetParameter;
@@ -26,15 +27,17 @@ public class runTest {
     private SetGetParameter setGetParameter;
 
     @BeforeTest
-    @Parameters({"Env","BuildNo"})
-    public void setParameter(@Optional("testingstring") String Env , @Optional("testingBuildNo") String BuildNo) throws Exception {
+    @Parameters({"runEnv","buildUrl","testUrl"})
+    public void setParameter(@Optional("testingstring") String runEnv , @Optional("testingBuildUrl") String buildUrl, @Optional("www.baidu.com") String testUrl) throws Exception {
         setGetParameter = new SetGetParameter();
         setGetParameter.setLoginUser("svp_p_sdkuser");
         setGetParameter.setLoginPassword("OEI0Vll6emM=");
-        setGetParameter.setBuildNo(BuildNo);
+        setGetParameter.setBuildNo(buildUrl);
         setGetParameter.getBuildNo();
-        setGetParameter.setENV(Env);
+        setGetParameter.setENV(runEnv);
         setGetParameter.getEnv();
+        setGetParameter.setBrowser(testUrl);
+        setGetParameter.getBrowser();
 
         System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
         System.out.println(setGetParameter.getLoginUser());
@@ -47,7 +50,7 @@ public class runTest {
     @AfterTest
     public void createpropFile(){
         CreateEnvFile createprop = new CreateEnvFile();
-        createprop.createFile(setGetParameter.getEnv(),setGetParameter.getBuildNo(),setGetParameter.getBuildNo());
+        createprop.createFile(setGetParameter.getEnv(),setGetParameter.getBuildNo(),setGetParameter.getBrowser());
     }
     @BeforeTest
     public void setupTest() {
@@ -63,11 +66,14 @@ public class runTest {
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify SDKpackage")
     public void testcase1() {
+        SoftAssert softAssertion = new SoftAssert();
         VerifiedPackage verifiedPadk = new VerifiedPackage();
         verifiedPadk.createFoder();
-
-        Assert.assertTrue(driver.getTitle().contains("Software sevelopment"));
-
+        if (!driver.getTitle().contains("google")){
+           softAssertion.fail("Testing no in google");
+           softAssertion.assertAll();
+        }
+        //Assert.assertTrue(driver.getTitle().contains("Software sevelopment"));
     }
 
     @Test(priority = 1,description = "testcaseparam")
@@ -98,12 +104,10 @@ public class runTest {
     }
 
 
-
     @Attachment(value = "Sample csv attachment", type = "text/html")
     public byte[] saveCsvAttachment() throws URISyntaxException, IOException {
         return getSampleFile("index.html");
     }
-
 
     private byte[] getSampleFile(String fileName) throws IOException, URISyntaxException {
         URL resource = getClass().getClassLoader().getResource(fileName);

@@ -1,20 +1,17 @@
 package test.cicd.project.Utili;
 
-import org.omg.CORBA.Environment;
-
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Properties;
 
 public class CreateEnvFile {
 
-    public void createFile(String Platform, String repo , String Version) {
+    public void createFile(String platForm, String buildUrl, String testUrl) {
 
         Properties properties = new Properties();
-        properties.setProperty("Platform", Platform);
-        properties.setProperty("Repo", repo);
-        properties.setProperty("Version", Version);
+        properties.setProperty("Platform", platForm);
+        properties.setProperty("BuildUrl", buildUrl);
+        properties.setProperty("TestUrl", testUrl);
         FileWriter writer = null;
         try {
             writer = new FileWriter("allure-results\\environment.properties");

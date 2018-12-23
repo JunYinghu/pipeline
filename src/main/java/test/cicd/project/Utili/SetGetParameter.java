@@ -7,6 +7,7 @@ public class SetGetParameter {
     private String LoginUserPassword;
     private String currentBuildNo;
     private String currentENV;
+    private String currentBrowser;
 
     public void setLoginUser(String loginUser){
         loginUserId = loginUser;
@@ -30,8 +31,6 @@ public class SetGetParameter {
 
     public String getBuildNo(){
         return currentBuildNo;
-
-
     }
 
     public void setENV(String env){
@@ -40,5 +39,12 @@ public class SetGetParameter {
 
     public String getEnv (){
         return currentENV;
+    }
+
+    public void setBrowser(String browser){
+        currentBrowser = browser;
+    }
+    public String getBrowser(){
+        return currentBrowser;
     }
 }

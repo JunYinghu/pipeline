@@ -3,8 +3,9 @@
 <suite name="All Test Suite">
     <parameter name="LoginUserName" value="${LoginUser}"/>
     <parameter name="LoginUserPassword" value="${Password}"/>
-    <parameter name="Env" value="${Env}"/>
-    <parameter name="BuildNo" value="${BuildNo}"/>
+    <parameter name="runEnv" value="${Env}"/>
+    <parameter name="buildNo" value="${BuildNo}"/>
+    <parameter name="testUrl" value="${TestUrl}"/>
 
     <test verbose="2" preserve-order="true" name="D:/pipeline/src/test/java/test/cicd/project/runTest.java">
         <classes>
