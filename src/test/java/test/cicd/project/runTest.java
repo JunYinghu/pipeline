@@ -75,7 +75,7 @@ public class runTest {
         SoftAssert softAssertion = new SoftAssert();
         VerifiedPackage verifiedPadk = new VerifiedPackage();
         verifiedPadk.createFoder();
-        if (!driver.getTitle().contains("google")) {
+        if (!driver.getTitle().contains("Google")) {
             softAssertion.fail("Testing not in google");
             softAssertion.assertAll();
         }
