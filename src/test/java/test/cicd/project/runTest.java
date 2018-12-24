@@ -73,7 +73,7 @@ public class runTest {
     @Link("http://www.baidu.com")
     @Issue("123")
     @TmsLink("test-1")
-    public void testcase1() {
+    public void titleVerification() {
         SoftAssert softAssertion = new SoftAssert();
         VerifiedPackage verifiedPadk = new VerifiedPackage();
         verifiedPadk.createFoder();

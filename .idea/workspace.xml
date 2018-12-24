@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/allure-results/categories.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,29 +47,29 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="2833" />
+          <entry key="java" value="2856" />
           <entry key="properties" value="81" />
-          <entry key="txt" value="170" />
-          <entry key="xml" value="182" />
+          <entry key="txt" value="191" />
+          <entry key="xml" value="183" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2833" />
-          <entry key="PLAIN_TEXT" value="177" />
+          <entry key="JAVA" value="2856" />
+          <entry key="PLAIN_TEXT" value="198" />
           <entry key="Properties" value="81" />
-          <entry key="XML" value="182" />
+          <entry key="XML" value="183" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="74" column="22" lean-forward="true" selection-start-line="73" selection-start-column="4" selection-end-line="74" selection-end-column="22" />
+            <state relative-caret-position="256">
+              <caret line="105" column="25" lean-forward="true" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3238#3239#0" expanded="true" />
@@ -88,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/allure-results/categories.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="289">
+              <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -125,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <state relative-caret-position="323">
+              <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -216,11 +216,11 @@
         <option value="$PROJECT_DIR$/allure-results/environment.properties" />
         <option value="$PROJECT_DIR$/src/main/java/test/cicd/project/Utili/SetGetParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/cicd/project/Utili/CreateEnvFile.java" />
-        <option value="$PROJECT_DIR$/testng.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/allure.properties" />
         <option value="$PROJECT_DIR$/allure-results/categories.json" />
+        <option value="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
       </list>
     </option>
   </component>
@@ -337,7 +337,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545610119014" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545610328443" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CucumberProject/CucumberProject/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -648,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545609573879</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="add category json">
+      <created>1545610141629</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1545610141629</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -696,7 +703,8 @@
     <MESSAGE value="links" />
     <MESSAGE value="add allure.properties file" />
     <MESSAGE value="remove repeated io in pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove repeated io in pom" />
+    <MESSAGE value="add category json" />
+    <option name="LAST_COMMIT_MESSAGE" value="add category json" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/AllureListerner.java" />
@@ -788,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/VerifiedPackage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -813,18 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="74" column="22" lean-forward="true" selection-start-line="73" selection-start-column="4" selection-end-line="74" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3238#3239#0" expanded="true" />
-            <element signature="e#3286#3287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/allure.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -834,8 +823,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/allure-results/categories.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="289">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="105" column="25" lean-forward="true" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3238#3239#0" expanded="true" />
+            <element signature="e#3286#3287#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

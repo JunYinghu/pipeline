@@ -11,6 +11,7 @@
         <classes>
             <class name="test.cicd.project.runTest">
                 <methods>
+                    <include name="titleVerification"/>
                     <include name="testParam"/>
                     <include name="csvAttachmentTest"/>
                 </methods>
