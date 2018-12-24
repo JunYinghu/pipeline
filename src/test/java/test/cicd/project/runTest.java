@@ -31,16 +31,13 @@ public class runTest {
 
     @BeforeTest
     @Parameters({"runEnv", "buildUrl", "testUrl"})
-    public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("www.baidu.com") String testUrl) throws Exception {
+    public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.baidu.com") String testUrl) throws Exception {
         setGetParameter = new SetGetParameter();
         setGetParameter.setLoginUser("svp_p_sdkuser");
         setGetParameter.setLoginPassword("OEI0Vll6emM=");
         setGetParameter.setBuildNo(buildUrl);
-
         setGetParameter.setENV(runEnv);
-
         setGetParameter.setBrowser(testUrl);
-
 
         System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
         System.out.println(setGetParameter.getLoginUser());
@@ -63,6 +60,7 @@ public class runTest {
         driver = new ChromeDriver();
         //Create a new ChromeDriver
         //Go to www.swtestacademy.com
+        System.out.println("here is opened link"+setGetParameter.getBrowser());
         driver.navigate().to(setGetParameter.getBrowser());
     }
 
