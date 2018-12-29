@@ -20,7 +20,7 @@ import static org.testng.Assert.fail;
 
 
 
-@Epic("Regression Tests")
+@Epic("SIT Tests")
 @Feature("Testing Practice")
 public class runTest {
 
