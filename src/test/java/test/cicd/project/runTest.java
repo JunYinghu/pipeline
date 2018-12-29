@@ -95,10 +95,11 @@ public class runTest {
         System.out.println(setGetParameter.getLoginUser());
     }
 
-    // @Test(priority = 1,description = "Binscope scan")
+    @Test(priority = 1,description = "Flaky Case")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to scan file one by one")
-    public void testcaseprint() {
+    @Flaky
+    public void testFlaky() {
         System.out.println("i am here3");
     }
 
