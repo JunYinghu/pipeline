@@ -71,7 +71,7 @@ public class runTest {
     @Link("http://www.baidu.com")
     @Issue("123")
     @TmsLink("test-1")
-    @Flaky
+
     public void titleVerification() {
 
         VerifiedPackage verifiedPadk = new VerifiedPackage();
