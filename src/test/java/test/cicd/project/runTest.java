@@ -97,7 +97,7 @@ public class runTest {
     }
 
     @Test(priority = 1,description = "TestFlakyCase")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Description("The case to view Flack")
     @Story("here is test flaky")
     @Flaky
@@ -106,6 +106,7 @@ public class runTest {
         if (!driver.getCurrentUrl().contains(searchkeyword)){
             softAssertion.fail("Url Not with google");
             softAssertion.assertAll();
+
         };
     }
 
