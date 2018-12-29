@@ -28,7 +28,7 @@ public class runTest {
 
     private WebDriver driver;
     private SetGetParameter setGetParameter;
-
+    SoftAssert softAssertion = new SoftAssert();
     @BeforeTest
     @Parameters({"runEnv", "buildUrl", "testUrl"})
     public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.baidu.com") String testUrl) throws Exception {
@@ -72,7 +72,7 @@ public class runTest {
     @Issue("123")
     @TmsLink("test-1")
     public void titleVerification() {
-        SoftAssert softAssertion = new SoftAssert();
+
         VerifiedPackage verifiedPadk = new VerifiedPackage();
         verifiedPadk.createFoder();
         if (!driver.getTitle().contains("Google")) {
@@ -100,7 +100,12 @@ public class runTest {
     @Description("The case to scan file one by one")
     @Flaky
     public void testFlaky() {
-        System.out.println("i am here3");
+        if (!driver.getCurrentUrl().contains("google")){
+            softAssertion.fail("Testing not in google");
+            softAssertion.assertAll();
+        };
+
+
     }
 
     @Test(description = "CSV Attachment")
