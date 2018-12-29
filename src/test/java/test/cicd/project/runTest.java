@@ -69,7 +69,7 @@ public class runTest {
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify Url Title")
     @Link("http://www.google.com")
-    @Issue("123")
+    @Issue("jira-001")
     @TmsLink("test-1")
 
     public void titleVerification() {
