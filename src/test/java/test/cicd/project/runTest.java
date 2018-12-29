@@ -99,6 +99,7 @@ public class runTest {
     @Test(priority = 1,description = "TestFlakyCase")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to view Flack")
+    @Story("here is test flaky")
     @Flaky
     public void testFlaky() {
         String searchkeyword ="google";
