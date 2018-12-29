@@ -95,7 +95,7 @@ public class runTest {
         System.out.println(setGetParameter.getLoginUser());
     }
 
-    @Test(priority = 1,description = "FlakyCase")
+    @Test(priority = 1,description = "TestFlakyCase")
     @Severity(SeverityLevel.NORMAL)
     @Description("The case to view Flack")
     @Flaky
