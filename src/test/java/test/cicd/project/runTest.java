@@ -68,7 +68,7 @@ public class runTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify Url Title")
-    @Link("http://www.google.com")
+    @Link("http://www.baidu.com")
     @Issue("jira-001")
     @TmsLink("test-1")
 
