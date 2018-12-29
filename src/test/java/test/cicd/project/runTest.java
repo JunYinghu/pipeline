@@ -101,7 +101,8 @@ public class runTest {
     @Description("The case to view Flack")
     @Flaky
     public void testFlaky() {
-        if (!driver.getCurrentUrl().contains("google")){
+        String searchkeyword ="google";
+        if (!driver.getCurrentUrl().contains(searchkeyword)){
             softAssertion.fail("Url Not with google");
             softAssertion.assertAll();
         };
