@@ -95,17 +95,15 @@ public class runTest {
         System.out.println(setGetParameter.getLoginUser());
     }
 
-    @Test(priority = 1,description = "Flaky Case")
+    @Test(priority = 1,description = "FlakyCase")
     @Severity(SeverityLevel.NORMAL)
-    @Description("The case to scan file one by one")
+    @Description("The case to view Flack")
     @Flaky
     public void testFlaky() {
         if (!driver.getCurrentUrl().contains("google")){
-            softAssertion.fail("Testing not in google");
+            softAssertion.fail("Url Not with google");
             softAssertion.assertAll();
         };
-
-
     }
 
     @Test(description = "CSV Attachment")
