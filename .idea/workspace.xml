@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,16 +47,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="3134" />
+          <entry key="java" value="3141" />
           <entry key="properties" value="81" />
-          <entry key="txt" value="788" />
+          <entry key="txt" value="857" />
           <entry key="xml" value="246" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3134" />
-          <entry key="PLAIN_TEXT" value="795" />
+          <entry key="JAVA" value="3141" />
+          <entry key="PLAIN_TEXT" value="864" />
           <entry key="Properties" value="81" />
           <entry key="XML" value="246" />
         </counts>
@@ -65,11 +65,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="192">
+              <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+            <state relative-caret-position="221">
+              <caret line="13" column="59" lean-forward="true" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -210,8 +210,8 @@
         <option value="$PROJECT_DIR$/src/test/resources/allure.properties" />
         <option value="$PROJECT_DIR$/allure-results/categories.json" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" />
         <option value="$PROJECT_DIR$/testng.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" />
       </list>
     </option>
   </component>
@@ -381,20 +381,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543657200719</updated>
-    </task>
-    <task id="LOCAL-00011" summary="see attachment testing">
-      <created>1544272346550</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1544272346550</updated>
-    </task>
-    <task id="LOCAL-00012" summary="see parameter testing">
-      <created>1544272817843</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1544272817843</updated>
     </task>
     <task id="LOCAL-00013" summary="see parameter testing">
       <created>1544273212286</created>
@@ -725,7 +711,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546073938324</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="modification of TestNg">
+      <created>1546074376019</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1546074376019</updated>
+    </task>
+    <task id="LOCAL-00061" summary="modification for Link from google to baidu">
+      <created>1546077142471</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1546077142472</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -764,8 +764,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&#10;test parameter" />
-    <MESSAGE value="testing link" />
     <MESSAGE value="testing links" />
     <MESSAGE value="links" />
     <MESSAGE value="add allure.properties file" />
@@ -789,7 +787,9 @@
     <MESSAGE value="make a push without changes" />
     <MESSAGE value="modification on Link from baidu to google for testing push even." />
     <MESSAGE value="modification on issue id to jira-001" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification on issue id to jira-001" />
+    <MESSAGE value="modification of TestNg" />
+    <MESSAGE value="modification for Link from google to baidu" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification for Link from google to baidu" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/AllureListerner.java" />
@@ -827,16 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -915,8 +905,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        <state relative-caret-position="221">
+          <caret line="13" column="59" lean-forward="true" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
