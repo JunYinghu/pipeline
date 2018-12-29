@@ -106,7 +106,6 @@ public class runTest {
         if (!driver.getCurrentUrl().contains(searchkeyword)){
             softAssertion.fail("Url Not with google");
             softAssertion.assertAll();
-
         };
     }
 

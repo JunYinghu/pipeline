@@ -46,16 +46,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="3118" />
+          <entry key="java" value="3119" />
           <entry key="properties" value="81" />
-          <entry key="txt" value="617" />
+          <entry key="txt" value="640" />
           <entry key="xml" value="241" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3118" />
-          <entry key="PLAIN_TEXT" value="624" />
+          <entry key="JAVA" value="3119" />
+          <entry key="PLAIN_TEXT" value="647" />
           <entry key="Properties" value="81" />
           <entry key="XML" value="241" />
         </counts>
@@ -68,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -332,7 +332,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546049795880" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546051310138" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CucumberProject/CucumberProject/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -390,13 +390,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543657200719</updated>
-    </task>
-    <task id="LOCAL-00007" summary="see attachment testing">
-      <created>1544252348230</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1544252348230</updated>
     </task>
     <task id="LOCAL-00008" summary="see attachment testing">
       <created>1544252650155</created>
@@ -734,7 +727,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546049526435</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="make a push from github">
+      <created>1546051281388</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1546051281392</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -797,7 +797,8 @@
     <MESSAGE value="Change epic" />
     <MESSAGE value="add story" />
     <MESSAGE value="disabled a step" />
-    <option name="LAST_COMMIT_MESSAGE" value="disabled a step" />
+    <MESSAGE value="make a push from github" />
+    <option name="LAST_COMMIT_MESSAGE" value="make a push from github" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/AllureListerner.java" />
@@ -931,7 +932,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
