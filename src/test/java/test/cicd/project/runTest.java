@@ -79,8 +79,9 @@ public class runTest {
         setOpenedPage();
         if (!getOpenedPage().contains(searchkeyword)){
             softAssertion.fail("Testing not in google");
-            softAssertion.assertAll();
+
         }
+        softAssertion.assertAll();
     }
 
     @Test(priority = 0, description = "Title verification")
@@ -119,8 +120,8 @@ public class runTest {
 
         if (!driver.getCurrentUrl().contains(searchkeyword)){
             softAssertion.fail("Url Not with google");
-            softAssertion.assertAll();
         };
+        softAssertion.assertAll();
     }
 
     @Test(description = "CSV Attachment")
