@@ -75,14 +75,10 @@ public class runTest {
     }
 
     @Step
-    public boolean verifiedPage(){
+    public void verifiedPage(){
         System.out.println(getOpenedPage());
-        if (getOpenedPage().contains("google")){
-            return true;
-        }
-        else
-        {
-            return false;
+        if (!getOpenedPage().contains("Google")){
+            softAssertion.fail("Testing not in google");
         }
     }
 
@@ -91,10 +87,8 @@ public class runTest {
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify Url Title")
     public void titleVerification() {
-        if (!verifiedPage()){
-            softAssertion.fail("Testing not in google");
-            softAssertion.assertAll();
-        }
+        verifiedPage();
+
 //        if (!driver.getTitle().contains("Google")) {
 //            softAssertion.fail("Testing not in google");
 //            softAssertion.assertAll();
