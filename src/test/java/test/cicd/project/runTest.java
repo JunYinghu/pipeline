@@ -101,7 +101,6 @@ public class runTest {
     @Test(priority = 1, description = "testLink")
     @Severity(SeverityLevel.BLOCKER)
     @Description("To test Lins")
-    @Link("go to linkedpage")
     @Link(name = "wikipage",type = "mylink")
     @Link(name = "extrnalPage",type = "link")
     @Issue("jira-002")
