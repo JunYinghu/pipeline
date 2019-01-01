@@ -98,11 +98,12 @@ public class runTest {
     }
 
 
-    @Test(priority = 1, description = "testParameter")
+    @Test(priority = 1, description = "testLink")
     @Severity(SeverityLevel.BLOCKER)
-    @Description("To test Parameter")
-    @Link("http://www.google.com")
-    @Link(name = "allure",type = "mylink")
+    @Description("To test Lins")
+    @Link("go to linkedpage")
+    @Link(name = "wikipage",type = "mylink")
+    @Link(name = "extrnalPage",type = "link")
     @Issue("jira-002")
     @TmsLink("test-1")
     public void testParam() throws Exception {
@@ -132,9 +133,9 @@ public class runTest {
         }
     }
 
-    @Attachment(value = "Sample csv attachment", type = "text/html")
+    @Attachment(value = "Sample csv attachment", type = "text/csv")
     public byte[] saveCsvAttachment() throws URISyntaxException, IOException {
-        return getSampleFile("index.html");
+        return getSampleFile("sample.csv");
     }
 
     @Step
