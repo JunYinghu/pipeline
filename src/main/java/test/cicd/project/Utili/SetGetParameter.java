@@ -8,6 +8,7 @@ public class SetGetParameter {
     private String currentBuildNo;
     private String currentENV;
     private String currentBrowser;
+    private String currentPageTitle;
 
     public void setLoginUser(String loginUser){
         loginUserId = loginUser;
@@ -46,5 +47,14 @@ public class SetGetParameter {
     }
     public String getBrowser(){
         return currentBrowser;
+    }
+
+    public void setCurrentPageTitle(String pageTitle)
+    {
+        currentPageTitle = pageTitle;
+    }
+
+    public String getCurrentPageTitle() {
+        return currentPageTitle;
     }
 }

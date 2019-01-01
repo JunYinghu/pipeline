@@ -64,23 +64,40 @@ public class runTest {
         driver.navigate().to(setGetParameter.getBrowser());
     }
 
+    @Step
+    public void setOpenedPage(){
+       setGetParameter.setCurrentPageTitle(driver.getTitle());
+    }
+    @Step
+    public String getOpenedPage(){
+        return setGetParameter.getCurrentPageTitle();
+    }
+
+    @Step
+    public boolean verifiedPage(){
+        if (getOpenedPage().contains("google")){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     @Test(priority = 0, description = "Title verification")
     @Severity(SeverityLevel.CRITICAL)
     @Description("This cases run on Windows / MAC / Linux")
     @Story("To verify Url Title")
-    @Link("http://www.baidu.com")
-    @Issue("jira-002")
-    @TmsLink("test-1")
-
     public void titleVerification() {
-
-        VerifiedPackage verifiedPadk = new VerifiedPackage();
-       // verifiedPadk.createFoder();
-        if (!driver.getTitle().contains("Google")) {
+        if (!verifiedPage()){
             softAssertion.fail("Testing not in google");
             softAssertion.assertAll();
         }
-        //Assert.assertTrue(driver.getTitle().contains("Software sevelopment"));
+//        if (!driver.getTitle().contains("Google")) {
+//            softAssertion.fail("Testing not in google");
+//            softAssertion.assertAll();
+//        }
+
     }
 
 
@@ -89,7 +106,7 @@ public class runTest {
     @Description("To test Parameter")
     @Link("http://www.google.com")
     @Link(name = "allure",type = "mylink")
-    @Issue("123")
+    @Issue("jira-002")
     @TmsLink("test-1")
     public void testParam() throws Exception {
         System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
@@ -124,6 +141,7 @@ public class runTest {
         return getSampleFile("index.html");
     }
 
+    @Step
     private byte[] getSampleFile(String fileName) throws IOException, URISyntaxException {
         URL resource = getClass().getClassLoader().getResource(fileName);
         if (resource == null) {
