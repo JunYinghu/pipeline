@@ -71,15 +71,13 @@ public class runTest {
     }
     @Step
     public String getOpenedPage(){
-        setOpenedPage();
         return setGetParameter.getCurrentPageTitle();
     }
 
     @Step
     public void verifiedPage(){
-        System.out.println(getOpenedPage());
+        setOpenedPage();
         if (!getOpenedPage().contains(searchkeyword)){
-
             softAssertion.fail("Testing not in google");
             softAssertion.assertAll();
         }
