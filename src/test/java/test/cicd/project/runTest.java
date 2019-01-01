@@ -70,6 +70,7 @@ public class runTest {
     }
     @Step
     public String getOpenedPage(){
+        setOpenedPage();
         return setGetParameter.getCurrentPageTitle();
     }
 
