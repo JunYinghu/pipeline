@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/allure-results/environment.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,7 +60,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3657" />
+          <entry key="JAVA" value="3704" />
           <entry key="PLAIN_TEXT" value="932" />
           <entry key="Properties" value="81" />
           <entry key="XML" value="254" />
@@ -71,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="54">
+              <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2281#2282#0" expanded="true" />
@@ -125,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="67" lean-forward="true" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+            <state relative-caret-position="85">
+              <caret line="5" column="61" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -333,7 +335,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546333910549" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546334976864" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CucumberProject/CucumberProject/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -391,13 +393,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543657200719</updated>
-    </task>
-    <task id="LOCAL-00017" summary="see parameter testing">
-      <created>1544317076416</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1544317076416</updated>
     </task>
     <task id="LOCAL-00018" summary="&#10;test parameter">
       <created>1544317326777</created>
@@ -735,7 +730,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546333356415</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="modification on verification">
+      <created>1546334238583</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1546334238583</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -756,7 +758,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.12445095" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.43045387" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" />
@@ -919,15 +921,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="67" lean-forward="true" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+        <state relative-caret-position="85">
+          <caret line="5" column="61" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+        <state relative-caret-position="54">
+          <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2281#2282#0" expanded="true" />

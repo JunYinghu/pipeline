@@ -29,6 +29,7 @@ public class runTest {
     private WebDriver driver;
     private SetGetParameter setGetParameter;
     SoftAssert softAssertion = new SoftAssert();
+    String searchkeyword ="google";
     @BeforeTest
     @Parameters({"runEnv", "buildUrl", "testUrl"})
     public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.baidu.com") String testUrl) throws Exception {
@@ -77,8 +78,10 @@ public class runTest {
     @Step
     public void verifiedPage(){
         System.out.println(getOpenedPage());
-        if (!getOpenedPage().contains("Google")){
+        if (!getOpenedPage().contains(searchkeyword)){
+
             softAssertion.fail("Testing not in google");
+            softAssertion.assertAll();
         }
     }
 
@@ -115,7 +118,7 @@ public class runTest {
     @Story("here is test flaky")
     @Flaky
     public void testFlaky() {
-        String searchkeyword ="google";
+
         if (!driver.getCurrentUrl().contains(searchkeyword)){
             softAssertion.fail("Url Not with google");
             softAssertion.assertAll();
@@ -125,12 +128,11 @@ public class runTest {
     @Test(description = "CSV Attachment")
     public void csvAttachmentTest() throws Exception {
         int i = 0;
-        while (i < 5) {
+        while (i < 2) {
             saveCsvAttachment();
             i++;
         }
     }
-
 
     @Attachment(value = "Sample csv attachment", type = "text/html")
     public byte[] saveCsvAttachment() throws URISyntaxException, IOException {
