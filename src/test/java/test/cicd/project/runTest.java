@@ -76,6 +76,7 @@ public class runTest {
 
     @Step
     public boolean verifiedPage(){
+        System.out.println(getOpenedPage());
         if (getOpenedPage().contains("google")){
             return true;
         }
