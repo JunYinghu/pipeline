@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <parameter name="LoginUserName" value="${LoginUser}"/>
-    <parameter name="LoginUserPassword" value="${Password}"/>
+    <!--<parameter name="LoginUserName" value="${LoginUser}"/>
+    <parameter name="LoginUserPassword" value="${Password}"/>-->
    <!-- <parameter name="testUrl" value="http://www.google.com"/>-->
-
-   <parameter name="testUrl" value="${TestUrl}"/>
-
+    <parameter name="testUrl" value="${TestUrl}"/>
     <parameter name="runEnv" value="${Env}"/>
     <parameter name="buildUrl" value="${BuildNo}"/>
-
 
     <test verbose="2" preserve-order="true" name="runTest">
         <classes>

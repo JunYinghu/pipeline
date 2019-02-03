@@ -95,16 +95,18 @@ public class runTest {
     }
 
 
-    @Test(priority = 1, enabled = false, description = "testLink")
+    @Test(priority = 1, description = "testLink")
     @Severity(SeverityLevel.BLOCKER)
-    @Description("To test Lins")
+    @Description("To test link")
     @Link(name = "wikipage", type = "mylink")
     @Link(name = "extrnalPage", type = "link")
     @Issue("jira-002")
     @TmsLink("test-1")
     public void testParam() throws Exception {
-        System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
-        System.out.println(setGetParameter.getLoginUser());
+        //System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
+        //System.out.println(setGetParameter.getLoginUser());
+
+        System.out.println("this case to test links");
     }
 
     @Test(priority = 1, description = "TestFlakyCase")
