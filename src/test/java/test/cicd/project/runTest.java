@@ -52,6 +52,8 @@ public class runTest {
     public void createpropFile() {
         CreateEnvFile createprop = new CreateEnvFile();
         createprop.createFile(setGetParameter.getEnv(), setGetParameter.getBuildNo(), setGetParameter.getBrowser());
+        driver.quit();
+
     }
 
     @BeforeTest
