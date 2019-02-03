@@ -22,7 +22,6 @@ public class SetGetParameter {
     public void setLoginPassword (String LoginPassword){
         LoginUserPassword = LoginPassword;
     }
-
     public String getLoginPassword(){
         return LoginUserPassword;
     }
