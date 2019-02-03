@@ -19,32 +19,31 @@ import static java.lang.String.format;
 import static org.testng.Assert.fail;
 
 
-
 @Epic("SIT Tests")
 @Feature("Testing Practice")
 public class runTest {
 
-
-
+    SoftAssert softAssertion = new SoftAssert();
+    String expectedTitle = "Google";
+    String expectedUrl = "https://www.google.com";
     private WebDriver driver;
     private SetGetParameter setGetParameter;
-    SoftAssert softAssertion = new SoftAssert();
-    String searchkeyword ="google";
+
     @BeforeTest
     @Parameters({"runEnv", "buildUrl", "testUrl"})
-    public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.baidu.com") String testUrl) throws Exception {
+    public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.google.com") String testUrl) throws Exception {
         setGetParameter = new SetGetParameter();
-        setGetParameter.setLoginUser("svp_p_sdkuser");
-        setGetParameter.setLoginPassword("OEI0Vll6emM=");
+  //      setGetParameter.setLoginUser("svp_p_sdkuser");
+  //      setGetParameter.setLoginPassword("OEI0Vll6emM=");
         setGetParameter.setBuildNo(buildUrl);
         setGetParameter.setENV(runEnv);
         setGetParameter.setBrowser(testUrl);
 
-        System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
-        System.out.println(setGetParameter.getLoginUser());
+    //    System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
+    //    System.out.println(setGetParameter.getLoginUser());
     }
 
-    public String decryptBase64(String key) throws Exception {
+    private String decryptBase64(String key) throws Exception {
         byte result[] = (new BASE64Decoder()).decodeBuffer(key);
         return new String(result);
     }
@@ -59,29 +58,32 @@ public class runTest {
     public void setupTest() {
         System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
         driver = new ChromeDriver();
-        //Create a new ChromeDriver
-        //Go to www.swtestacademy.com
-        System.out.println("here is opened link"+setGetParameter.getBrowser());
+        System.out.println("here is opened link" + setGetParameter.getBrowser());
         driver.navigate().to(setGetParameter.getBrowser());
     }
 
     @Step
-    public void setOpenedPage(){
-       setGetParameter.setCurrentPageTitle(driver.getTitle());
+    public void setOpenedPage() {
+        setGetParameter.setCurrentPageTitle(driver.getTitle());
     }
+
     @Step
-    public String getOpenedPage(){
+    public String getOpenedPage() {
         return setGetParameter.getCurrentPageTitle();
     }
 
     @Step
-    public void verifiedPage(){
+    public void verifiedPage() {
         setOpenedPage();
-        if (!getOpenedPage().contains(searchkeyword)){
-            softAssertion.assertFalse(false);
-            softAssertion.assertAll();
-        }
+        softAssertion.assertEquals(getOpenedPage(),expectedTitle);
+        softAssertion.assertFalse(false);
+        softAssertion.assertAll();
+        /*if (!getOpenedPage().contains(expectedTitle)) {
+            softAssertion.fail("KeyWords Google is not not found");
+            System.out.println("i am here to print:"+getOpenedPage());
 
+        }
+*/
     }
 
     @Test(priority = 0, description = "Title verification")
@@ -90,20 +92,14 @@ public class runTest {
     @Story("To verify Url Title")
     public void titleVerification() {
         verifiedPage();
-
-//        if (!driver.getTitle().contains("Google")) {
-//            softAssertion.fail("Testing not in google");
-//            softAssertion.assertAll();
-//        }
-
     }
 
 
-    @Test(priority = 1, enabled = false,description = "testLink")
+    @Test(priority = 1, enabled = false, description = "testLink")
     @Severity(SeverityLevel.BLOCKER)
     @Description("To test Lins")
-    @Link(name = "wikipage",type = "mylink")
-    @Link(name = "extrnalPage",type = "link")
+    @Link(name = "wikipage", type = "mylink")
+    @Link(name = "extrnalPage", type = "link")
     @Issue("jira-002")
     @TmsLink("test-1")
     public void testParam() throws Exception {
@@ -111,19 +107,17 @@ public class runTest {
         System.out.println(setGetParameter.getLoginUser());
     }
 
-    @Test(priority = 1,description = "TestFlakyCase")
+    @Test(priority = 1, description = "TestFlakyCase")
     @Severity(SeverityLevel.CRITICAL)
     @Description("The case to view Flack")
     @Story("here is test flaky")
     @Flaky
     public void testFlaky() {
-
-        if (!driver.getCurrentUrl().contains(searchkeyword)){
+        if (!driver.getCurrentUrl().contains(expectedUrl)) {
             //softAssertion.fail("Url Not with google");
-            softAssertion.assertFalse(false);
+            softAssertion.fail("It is not expected Url");
             softAssertion.assertAll();
         }
-
     }
 
     @Test(description = "CSV Attachment")
@@ -136,7 +130,7 @@ public class runTest {
     }
 
     @Attachment(value = "Sample csv attachment", type = "text/csv")
-    public byte[] saveCsvAttachment() throws URISyntaxException, IOException {
+    private byte[] saveCsvAttachment() throws URISyntaxException, IOException {
         return getSampleFile("sample.csv");
     }
 
