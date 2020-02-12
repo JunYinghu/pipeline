@@ -9,10 +9,21 @@
     <parameter name="buildUrl" value="${BuildNo}"/>
 
     <test verbose="2" preserve-order="true" name="runTest">
-        <parameter name="runEnv" value="linux"/>
+
+
+
+
         <classes>
             <class name="test.cicd.project.runTest">
 
+                <parameter name="runEnv" value="master"/>
+                <methods>
+                    <include name="titleVerification"/>
+
+                </methods>
+
+
+                <parameter name="runEnv" value="linux"/>
                 <methods>
                     <include name="titleVerification"/>
                     <include name="testParam"/>

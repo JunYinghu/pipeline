@@ -58,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -258,7 +258,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581537243693" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581537367293" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CucumberProject/CucumberProject/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -317,13 +317,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543657200719</updated>
-    </task>
-    <task id="LOCAL-00041" summary="rest test on jenkins">
-      <created>1545611311959</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1545611311959</updated>
     </task>
     <task id="LOCAL-00042" summary="add testFailureIgnore in pom">
       <created>1545612019703</created>
@@ -661,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581537114632</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="re-test">
+      <created>1581537255248</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1581537255248</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -698,7 +698,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add searchkeyword in flaky case" />
     <MESSAGE value="Change epic" />
     <MESSAGE value="add story" />
     <MESSAGE value="disabled a step" />
@@ -723,7 +722,8 @@
     <MESSAGE value="debug run env" />
     <MESSAGE value="re-run env" />
     <MESSAGE value="re-test again" />
-    <option name="LAST_COMMIT_MESSAGE" value="re-test again" />
+    <MESSAGE value="re-test" />
+    <option name="LAST_COMMIT_MESSAGE" value="re-test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/AllureListerner.java" />
@@ -852,8 +852,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="221">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
     </entry>
