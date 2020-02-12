@@ -33,14 +33,12 @@ public class runTest {
     @Parameters({"runEnv", "buildUrl", "testUrl"})
     public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.google.com") String testUrl) throws Exception {
         setGetParameter = new SetGetParameter();
-  //      setGetParameter.setLoginUser("svp_p_sdkuser");
-  //      setGetParameter.setLoginPassword("OEI0Vll6emM=");
+
         setGetParameter.setBuildNo(buildUrl);
         setGetParameter.setENV(runEnv);
         setGetParameter.setBrowser(testUrl);
 
-    //    System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
-    //    System.out.println(setGetParameter.getLoginUser());
+
     }
 
     private String decryptBase64(String key) throws Exception {
@@ -97,7 +95,7 @@ public class runTest {
     }
 
 
-    @Test(priority = 1, description = "testLink")
+    @Test(groups = {"windows"}, priority = 1, description = "testLink")
     @Severity(SeverityLevel.BLOCKER)
     @Description("To test link")
     @Link(name = "wikipage", type = "mylink")

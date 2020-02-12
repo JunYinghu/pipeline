@@ -11,11 +11,17 @@
     <test verbose="2" preserve-order="true" name="runTest">
         <classes>
             <class name="test.cicd.project.runTest">
+                <parameter name="ruunigon" value="Windows"/>
+                <methods>
+
+                    <include name="csvAttachmentTest"/>
+                    <include name="testFlaky"/>
+                </methods>
+
+                <parameter name="ruunigon" value="Linux"/>
                 <methods>
                     <include name="titleVerification"/>
                     <include name="testParam"/>
-                    <include name="csvAttachmentTest"/>
-                    <include name="testFlaky"/>
                 </methods>
 
             </class>
