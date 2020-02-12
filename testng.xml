@@ -20,7 +20,7 @@
                 </methods>
 
 
-                <parameter name="runEnv" value="masterA1"/>
+                <parameter name="runEnv" value="A1"/>
 
                 <methods>
                     <include name="titleVerification"/>
