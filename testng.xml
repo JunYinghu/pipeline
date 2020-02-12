@@ -11,7 +11,7 @@
     <test verbose="2" preserve-order="true" name="runTest">
         <classes>
             <class name="test.cicd.project.runTest">
-
+                <parameter name="runEnv" value="linux"/>
                 <methods>
                     <include name="titleVerification"/>
                     <include name="testParam"/>
