@@ -13,7 +13,8 @@
             <class name="test.cicd.project.runTest">
                 <parameter name="ruunigon" value="Windows"/>
                 <methods>
-
+                    <include name="titleVerification"/>
+                    <include name="testParam"/>
                     <include name="csvAttachmentTest"/>
                     <include name="testFlaky"/>
                 </methods>
