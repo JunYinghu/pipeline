@@ -105,8 +105,11 @@ public class runTest {
     public void testParam() throws Exception {
         //System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
         //System.out.println(setGetParameter.getLoginUser());
+        if(System.getProperty("os.name").toLowerCase().contains("mac"))
+        {
+            System.out.println("this case to test links");
+        }
 
-        System.out.println("this case to test links");
     }
 
     @Test(priority = 1, description = "TestFlakyCase")
