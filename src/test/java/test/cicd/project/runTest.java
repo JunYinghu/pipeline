@@ -3,6 +3,7 @@ package test.cicd.project;
 import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.SkipException;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import sun.misc.BASE64Decoder;
@@ -108,6 +109,10 @@ public class runTest {
         if(System.getProperty("os.name").toLowerCase().contains("mac"))
         {
             System.out.println("this case to test links");
+        }
+        else
+        {
+            throw new SkipException("Using HSQL will fail this test. aborting...");
         }
 
     }
