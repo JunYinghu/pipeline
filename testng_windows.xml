@@ -8,9 +8,16 @@
 <!--    <parameter name="runEnv" value="${Env}"/>-->
     <parameter name="buildUrl" value="${BuildNo}"/>
 
-    <suite-files>
-        <suite-file path="testng_linux.xml"/>
-        <suite-file path="testng_windows.xml"/>
-    </suite-files>
+    <test verbose="2" preserve-order="true" name="runTest">
+        <parameter name="runEnv" value="master"/>
 
+        <classes>
+            <class name="test.cicd.project.runTest">
+                <methods>
+                    <include name="titleVerification"/>
+                </methods>
+
+            </class>
+        </classes>
+    </test>
 </suite>
