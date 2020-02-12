@@ -37,6 +37,7 @@ public class runTest {
 
         setGetParameter.setBuildNo(buildUrl);
         setGetParameter.setENV(runEnv);
+        System.out.println("here is run"+runEnv);
         setGetParameter.setBrowser(testUrl);
 
 
