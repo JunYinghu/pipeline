@@ -20,6 +20,12 @@
                 </methods>
 
 
+                <parameter name="runEnv" value="master"/>
+
+                <methods>
+                    <include name="titleVerification"/>
+                <include name="testParam"/>
+                </methods>
             </class>
         </classes>
     </test>
