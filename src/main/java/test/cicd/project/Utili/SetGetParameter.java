@@ -1,5 +1,7 @@
 package test.cicd.project.Utili;
 
+import java.util.Random;
+
 public class SetGetParameter {
 
 
@@ -56,4 +58,6 @@ public class SetGetParameter {
     public String getCurrentPageTitle() {
         return currentPageTitle;
     }
-}
+
+    }
+
