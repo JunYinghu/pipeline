@@ -3,10 +3,10 @@ package test.cicd.project;
 import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.SkipException;
+
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
-import sun.misc.BASE64Decoder;
+
 import test.cicd.project.Utili.CreateEnvFile;
 import test.cicd.project.Utili.SetGetParameter;
 
@@ -43,10 +43,6 @@ public class runTest {
 
     }
 
-    private String decryptBase64(String key) throws Exception {
-        byte result[] = (new BASE64Decoder()).decodeBuffer(key);
-        return new String(result);
-    }
 
     @AfterTest
     public void createpropFile() {
