@@ -31,16 +31,14 @@ public class runTest {
     private SetGetParameter setGetParameter;
 
     @BeforeTest
-    @Parameters({"runEnv", "buildUrl", "testUrl"})
-    public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.google.com") String testUrl) throws Exception {
+    @Parameters({"runEnv", "buildUrl", "testUrl", "EXECUTOR_NUMBER"})
+    public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.google.com") String testUrl, @Optional("EXECUTOR_NUMBER") String EXECUTOR_NUMBER )throws Exception {
         setGetParameter = new SetGetParameter();
 
         setGetParameter.setBuildNo(buildUrl);
         setGetParameter.setENV(runEnv);
         System.out.println("here is run"+runEnv);
         setGetParameter.setBrowser(testUrl);
-
-
     }
 
 
