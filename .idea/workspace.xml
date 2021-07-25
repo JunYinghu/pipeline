@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/cicd/project/AnnotationTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/cicd/project/RetryAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Driver/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/CallSecurityTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_linux.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_linux.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_windows.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_windows.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +191,7 @@
       <recent name="D:\pipeline\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.MockServerTest.MockServerGetMethod_TC01">
+  <component name="RunManager" selected="TestNG.D:/ideaProjects/pipeline/testng_windows.xml">
     <configuration name="Base64" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.cicd.project.Base64" />
       <module name="TestForCICD" />
@@ -192,6 +201,35 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/ideaProjects/pipeline/target/surefire-reports/testng-failed.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/ideaProjects/pipeline/testng_linux.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestForCICD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_linux.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/ideaProjects/pipeline/testng_windows.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestForCICD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_windows.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,6 +254,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/ideaProjects/pipeline/testng_windows.xml" />
+        <item itemvalue="TestNG.D:/ideaProjects/pipeline/target/surefire-reports/testng-failed.xml" />
+        <item itemvalue="TestNG.D:/ideaProjects/pipeline/testng_linux.xml" />
         <item itemvalue="TestNG.MockServerTest.MockServerGetMethod_TC01" />
         <item itemvalue="Application.Base64" />
       </list>
@@ -232,13 +273,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543657200719</updated>
-    </task>
-    <task id="LOCAL-00046" summary="modified test flaky">
-      <created>1546047378166</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1546047378167</updated>
     </task>
     <task id="LOCAL-00047" summary="modified test flaky">
       <created>1546047690406</created>
@@ -576,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623159818775</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Add EXECUTOR_NUMBER">
+      <created>1623159893385</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1623159893385</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="ToolWindowManager">

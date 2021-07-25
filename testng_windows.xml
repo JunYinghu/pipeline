@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <!--<parameter name="LoginUserName" value="${LoginUser}"/>
-    <parameter name="LoginUserPassword" value="${Password}"/>-->
-   <!-- <parameter name="testUrl" value="http://www.google.com"/>-->
-    <parameter name="testUrl" value="${TestUrl}"/>
-<!--    <parameter name="runEnv" value="${Env}"/>-->
-    <parameter name="buildUrl" value="${BuildNo}"/>
-
+    <listeners>
+        <listener class-name="test.cicd.project.AnnotationTransformer"/>
+    </listeners>
     <test verbose="2" preserve-order="true" name="runTest">
-        <parameter name="runEnv" value="master"/>
-
         <classes>
             <class name="test.cicd.project.runTest">
                 <methods>
-                    <include name="titleVerification"/>
+                    <include name="failTestForRetry"/>
+                    <include name="failTestNoRetry"/>
+                    <include name="passCase"/>
                 </methods>
-
             </class>
         </classes>
     </test>

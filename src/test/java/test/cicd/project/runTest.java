@@ -4,6 +4,7 @@ import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
@@ -17,6 +18,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static java.lang.String.format;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.fail;
 
 
@@ -32,12 +34,12 @@ public class runTest {
 
     @BeforeTest
     @Parameters({"runEnv", "buildUrl", "testUrl", "EXECUTOR_NUMBER"})
-    public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.google.com") String testUrl, @Optional("EXECUTOR_NUMBER") String EXECUTOR_NUMBER )throws Exception {
+    public void setParameter(@Optional("testingstring") String runEnv, @Optional("testingBuildUrl") String buildUrl, @Optional("http://www.google.com") String testUrl, @Optional("EXECUTOR_NUMBER") String EXECUTOR_NUMBER) throws Exception {
         setGetParameter = new SetGetParameter();
 
         setGetParameter.setBuildNo(buildUrl);
         setGetParameter.setENV(runEnv);
-        System.out.println("here is run EXECUTOR_NUMBER"+EXECUTOR_NUMBER);
+        System.out.println("here is run EXECUTOR_NUMBER" + EXECUTOR_NUMBER);
         setGetParameter.setBrowser(testUrl);
     }
 
@@ -71,7 +73,7 @@ public class runTest {
     @Step
     public void verifiedPage() {
         setOpenedPage();
-        softAssertion.assertEquals(getOpenedPage(),expectedTitle);
+        softAssertion.assertEquals(getOpenedPage(), expectedTitle);
         softAssertion.assertFalse(false);
         softAssertion.assertAll();
         /*if (!getOpenedPage().contains(expectedTitle)) {
@@ -102,7 +104,7 @@ public class runTest {
         //System.out.println(decryptBase64(setGetParameter.getLoginPassword()));
         //System.out.println(setGetParameter.getLoginUser());
 
-            System.out.println("this case to test links");
+        System.out.println("this case to test links");
 
     }
 
@@ -128,10 +130,13 @@ public class runTest {
         }
     }
 
+    @Test
     @Attachment(value = "Sample csv attachment", type = "text/csv")
     private byte[] saveCsvAttachment() throws URISyntaxException, IOException {
         return getSampleFile("sample.csv");
     }
+
+
 
     @Step
     private byte[] getSampleFile(String fileName) throws IOException, URISyntaxException {
@@ -142,5 +147,27 @@ public class runTest {
         return Files.readAllBytes(Paths.get(resource.toURI()));
     }
 
+
+    @Test
+    public void failTestForRetry() {
+        int i = 1;
+        int j = 0;
+        System.out.println("retry times :"  + j);
+        assertEquals(i, 0);
+    }
+
+    @Test
+    public void failTestNoRetry() {
+        int i = 1;
+        int j = 0;
+        System.out.println("retry times :"  + j);
+        assertEquals(i, 0);
+    }
+
+    @Test
+    public void passCase() {
+        int i = 1;
+        assertEquals(i, 1);
+    }
 }
 
