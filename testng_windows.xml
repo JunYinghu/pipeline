@@ -9,7 +9,6 @@
             <class name="test.cicd.project.runTest">
                 <methods>
                     <include name="failTestForRetry"/>
-
                     <include name="passCase"/>
                     <include name="csvAttachmentTest"/>
                     <include name="titleVerification"/>

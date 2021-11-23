@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng_windows.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_windows.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -278,13 +277,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543657200719</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Change epic">
-      <created>1546049001503</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1546049001503</updated>
     </task>
     <task id="LOCAL-00054" summary="add story">
       <created>1546049162655</created>
@@ -622,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637662273826</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="added retry logic">
+      <created>1637662576396</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1637662576398</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="ToolWindowManager">
