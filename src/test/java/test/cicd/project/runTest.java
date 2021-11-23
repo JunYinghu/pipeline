@@ -144,6 +144,8 @@ public class runTest {
         if (resource == null) {
             fail(format("Couldn't find resource '%s'", fileName));
         }
+        System.out.print(resource);
+        System.out.print(resource.toURI());
         return Files.readAllBytes(Paths.get(resource.toURI()));
     }
 
