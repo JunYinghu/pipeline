@@ -130,21 +130,20 @@ public class runTest {
         }
     }
 
-    @Test
-    @Attachment(value = "Sample csv attachment", type = "text/csv")
+    @Attachment(value = "Sample csv attachment", type = "Application/xml")
     private byte[] saveCsvAttachment() throws URISyntaxException, IOException {
-        return getSampleFile("sample.csv");
+        return getSampleFile("D:\\ideaProjects\\pipeline\\testng.xml");
     }
 
     @Step
     private byte[] getSampleFile(String fileName) throws IOException, URISyntaxException {
-        URL resource = getClass().getClassLoader().getResource(fileName);
+        /*URL resource = getClass().getClassLoader().getResource(fileName);
         if (resource == null) {
             fail(format("Couldn't find resource '%s'", fileName));
         }
         System.out.print(resource);
-        System.out.print(resource.toURI());
-        return Files.readAllBytes(Paths.get(resource.toURI()));
+        System.out.print(resource.toURI());*/
+        return Files.readAllBytes(Paths.get(fileName));
     }
 
 
