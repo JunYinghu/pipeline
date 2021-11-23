@@ -12,6 +12,7 @@
                     <include name="failTestNoRetry"/>
                     <include name="passCase"/>
                     <include name="csvAttachmentTest"/>
+                    <include name="titleVerification"/>
                 </methods>
             </class>
         </classes>

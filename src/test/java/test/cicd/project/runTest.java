@@ -124,7 +124,7 @@ public class runTest {
     @Test(description = "CSV Attachment")
     public void csvAttachmentTest() throws Exception {
         int i = 0;
-        while (i < 2) {
+        while (i < 1) {
             saveCsvAttachment();
             i++;
         }
@@ -135,8 +135,6 @@ public class runTest {
     private byte[] saveCsvAttachment() throws URISyntaxException, IOException {
         return getSampleFile("sample.csv");
     }
-
-
 
     @Step
     private byte[] getSampleFile(String fileName) throws IOException, URISyntaxException {
