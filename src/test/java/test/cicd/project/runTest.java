@@ -167,6 +167,7 @@ public class runTest {
     @Test
     public void passCase() {
         int i = 1;
+        System.out.println(i = 1);
         assertEquals(i, 1);
     }
 }
