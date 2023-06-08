@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="added retry logic">
+    <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/MockServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/MockServerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,18 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/Utili/CreateEnvFile.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/Utili/ExpectationInit.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/Utili/SetGetParameter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/runTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/VerifiedPackage.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/test/cicd/project/MockServerTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/AnnotationTransformer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/mockserver.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/RetryAnalyzer.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -191,28 +204,9 @@
       <recent name="D:\pipeline\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/ideaProjects/pipeline/testng_windows.xml (1)">
-    <configuration name="D:/ideaProjects/pipeline/target/surefire-reports/testng-failed.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.MockServerTest.MockServerGetMethod_TC02">
     <configuration name="D:/ideaProjects/pipeline/testng_windows.xml (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="pipeline" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_windows.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D:/ideaProjects/pipeline/testng_windows.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestForCICD" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_windows.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
@@ -232,6 +226,42 @@
       <option name="PACKAGE_NAME" value="test.cicd.project" />
       <option name="MAIN_CLASS_NAME" value="test.cicd.project.MockServerTest" />
       <option name="METHOD_NAME" value="MockServerGetMethod_TC01" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MockServerTest.MockServerGetMethod_TC02" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestForCICD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.cicd.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.cicd.project" />
+      <option name="MAIN_CLASS_NAME" value="test.cicd.project.MockServerTest" />
+      <option name="METHOD_NAME" value="MockServerGetMethod_TC02" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MockServerTest.MockServerGetMethod_TC03" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TestForCICD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.cicd.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.cicd.project" />
+      <option name="MAIN_CLASS_NAME" value="test.cicd.project.MockServerTest" />
+      <option name="METHOD_NAME" value="MockServerGetMethod_TC03" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -259,11 +289,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MockServerTest.MockServerGetMethod_TC02" />
+        <item itemvalue="TestNG.MockServerTest.MockServerGetMethod_TC03" />
         <item itemvalue="TestNG.D:/ideaProjects/pipeline/testng_windows.xml (1)" />
         <item itemvalue="TestNG.runTest.saveCsvAttachment" />
         <item itemvalue="TestNG.MockServerTest.MockServerGetMethod_TC01" />
-        <item itemvalue="TestNG.D:/ideaProjects/pipeline/testng_windows.xml" />
-        <item itemvalue="TestNG.D:/ideaProjects/pipeline/target/surefire-reports/testng-failed.xml" />
       </list>
     </recent_temporary>
   </component>
