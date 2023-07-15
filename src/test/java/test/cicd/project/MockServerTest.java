@@ -72,8 +72,8 @@ public class MockServerTest {
                 .baseUri("http://localhost:8082/api/customFields/getAllCustomList?")
                 .param("projectId", "593988941040848896")
                 .param("scopeId", "3000001")
-                .header("Authorization", "7dkkjaycqgz5k48a6bh61eshfftg8umhw218fmwq4f1fps4ouc")
-                .header("emailid", "hujy11@gmail.com")
+                .header("Authorization", "7xwff6jd9u0guiju0t48ao772t5rvlik2bk28nayuslnha1cr3")
+                .header("emailid", "qatest.hu.mary3@gmail.com")
                 .log().uri()
                 .when()
                 .get()
@@ -135,8 +135,10 @@ public class MockServerTest {
 
 
 
+
     @AfterTest
     public void stopMockServer() {
         mockServer.stop();
     }
+
 }
