@@ -1,17 +1,19 @@
-properties[
+properties(
+[
 parameters(
 [
 choice (choices:["stg","prd","dev"],description:"test env"  ,name:"testEnv"),
 String (defaultValue:"Latest",description:"test version"  ,name:"testVersion"),
-booleanParam(defaultValue: true, description:"test sign off generated" , name:"signOff") 
-    
+booleanParam(defaultValue: true, description:"test sign off generated" , name:"signOff")
+
 ]
 )
-]
 
+]
+)
 pipeline {
 
-    agent any
+
 
     stages {
         stage('Build') {
