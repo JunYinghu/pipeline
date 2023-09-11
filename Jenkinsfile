@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'mvn --version'
-                sh 'mvn test pom.xml'
+                sh 'mvn clean package -f pom.xml'
             }
         }
         stage('Test') {
