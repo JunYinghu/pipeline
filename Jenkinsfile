@@ -13,7 +13,7 @@ booleanParam(defaultValue: true, description:"test sign off generated" , name:"s
 )
 pipeline {
 
-agent any
+  agent {label 'test'}
 
     stages {
         stage('Build') {
