@@ -1,0 +1,21 @@
+{
+
+  "title":"测试周期自动化",
+  "description":"sfjsldfjd",
+  "version":"2.0.0.0",
+  "reportTo":"huju",
+  "planExecuteDate":"",
+  "testPlatform":"Window11",
+  "allureReportUrl":"",
+  "testCycleStatus":"可执行",
+  "testMethod":"自动化",
+  "env":"用户验收测试",
+  "browser":"Chrome",
+  "testFrame":"Java + TestNg",
+  "remarks":"this is from automation TCs",
+  "currentRelease":1,
+  "released":0,
+  "projectId":"593988941040848898",
+  "customFieldDatas":{
+  }
+}

@@ -69,10 +69,10 @@ public class MockServerTest {
         System.out.println("for click API");
         String exceptionErrorMessage = "test failed: no found verification string";
         Response response = given()
-                .baseUri("http://localhost:8082/api/customFields/getAllCustomList?")
-                .param("projectId", "593988941040848896")
+                .baseUri("http://43.139.159.146:8082/api/customFields/getAllCustomList?")
+                .param("projectId", "593988941040848898")
                 .param("scopeId", "3000001")
-                .header("Authorization", "7xwff6jd9u0guiju0t48ao772t5rvlik2bk28nayuslnha1cr3")
+                .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g")
                 .header("emailid", "qatest.hu.mary3@gmail.com")
                 .log().uri()
                 .when()
