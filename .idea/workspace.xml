@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/testSetCreate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/cicd/project/Priortest/TestPayload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/PriorTestApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng_prioritestapi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/MockServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/MockServerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -659,7 +649,7 @@
       <option name="project" value="LOCAL" />
       <updated>1694265260395</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -696,7 +686,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modification on Link from baidu to google for testing push even." />
     <MESSAGE value="modification on issue id to jira-001" />
     <MESSAGE value="modification of TestNg" />
     <MESSAGE value="modification for Link from google to baidu" />
@@ -721,7 +710,8 @@
     <MESSAGE value="Add EXECUTOR_NUMBER" />
     <MESSAGE value="added retry logic" />
     <MESSAGE value="add jenkins file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add jenkins file" />
+    <MESSAGE value="added PriorTestApiTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="added PriorTestApiTest" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/test/cicd/project/AllureListerner.java" />
