@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PriorTest ApiTest Issue">
+
+    <test name="PriorTestApiIssue">
+
+        <classes>
+            <class name="test.cicd.project.PriorTestApiIssue">
+                <methods>
+                    <include name="skipTest_TC01"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

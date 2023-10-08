@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <!--<parameter name="LoginUserName" value="${LoginUser}"/>
-    <parameter name="LoginUserPassword" value="${Password}"/>-->
-    <!--<parameter name="testUrl" value="http://www.google.com"/>-->
-    <!--<parameter name="testUrl" value="use real "/>-->
-    <!--    <parameter name="runEnv" value="${Env}"/>-->
-    <!--  <parameter name="buildUrl" value="${BuildNo}"/>
-      <parameter name="EXECUTOR_NUMBER" value="${EXECUTOR_NUMBER}"/>-->
+<suite name="PriorTest API Testing Suite">
+
+    <listeners>
+        <listener class-name="com.priortest.api.ConnectAPIListener"/>
+    </listeners>
+    <parameter name="testCycle" value="tesitng testcycle"/>
+
+    <parameter name="$enablePriorTestApi" value="true"/>
+    <parameter name="Env" value="STG"/>
+    <parameter name="SignOff" value="true"/>
 
     <suite-files>
-        <!-- <suite-file path="testng_linux.xml"/>-->
+
         <suite-file path="testng_prioritestapi.xml"/>
-        <!-- <suite-file path="testng_mock.xml"/>-->
+        <!--<suite-file path="testng_prioritestapiissue.xml"/>-->
+
     </suite-files>
 </suite>
