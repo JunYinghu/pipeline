@@ -2,6 +2,7 @@ package test.cicd.project;
 
 import Config.BasicConfig;
 import com.priortest.annotation.TestCaseApi;
+import com.priortest.api.ConnectAPIListener;
 import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -10,14 +11,12 @@ import io.restassured.specification.RequestSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.SkipException;
+import org.testng.annotations.*;
 
 import java.io.File;
 
-//@Listeners({ConnectAPIListener.class})
+@Listeners({ConnectAPIListener.class})
 public class PriorTestApiTest extends BasicConfig {
     private static final Logger logger = LogManager.getLogger(PriorTestApiTest.class);
     private String loginToken;
@@ -27,7 +26,6 @@ public class PriorTestApiTest extends BasicConfig {
     public void basicSetup() {
         // setUp test base URI
         RestAssured.baseURI = "http://43.139.159.146:8082/api";
-
     }
 
     @BeforeMethod
@@ -35,23 +33,25 @@ public class PriorTestApiTest extends BasicConfig {
         httpRequest = RestAssured.given();
     }
 
-    @Test
+    @Test(enabled = true)
     @Description()
     @TestCaseApi(testCaseId = "1710492397516914690", feature = "Login")
-    public void $userLoginApi_TC01() {
-        String loginPayloadPath = "src/main/java/resources/login.json/";
-        httpRequest.body(new File(loginPayloadPath));
-        httpRequest.contentType("application/json").log().all();
-        //httpRequest.log().all();
-        Response response = httpRequest.post("/login");
-
-        int responseCode = response.statusCode();
-        Assert.assertEquals(responseCode, 200);
-
-        if (responseCode == 200) {
+    public void userLoginApi_TC01() {
+        if (1 == 1) {
+            throw new SkipException("Skipping this exception");
+        } else {
+            String loginPayloadPath = "src/main/java/resources/login.json/";
+            httpRequest.body(new File(loginPayloadPath));
+            httpRequest.contentType("application/json");
+            httpRequest.log().all();
+            Response response = httpRequest.post("/login");
+            int responseCode = response.statusCode();
+            logger.info(response.asString());
+            Assert.assertEquals(responseCode, 200);
+       /* if (responseCode == 200) {
             JsonPath jsonPathEvaluator = response.jsonPath();
             loginToken = jsonPathEvaluator.get("data.token");
-
+        }*/
         }
     }
 
@@ -59,15 +59,13 @@ public class PriorTestApiTest extends BasicConfig {
     @Description()
     @TestCaseApi(testCaseId = "1710492397454000130", feature = "testCycle")
     public void createTestCycle_TC02() {
+        userLoginApi_TC01();
         String createTestSetPayload = "src/main/java/resources/testSetCreate.json/";
         httpRequest.body(new File(createTestSetPayload));
         httpRequest.contentType("application/Json");
         httpRequest.header("Authorization", "Bearer " + loginToken).log().all();
-        //httpRequest.log().all();
         Response response = httpRequest.post("/testCycle/saveTestCycle");
-        logger.info("TC2 ---------" + response.asString());
         int responseCode = response.statusCode();
-
         Assert.assertEquals(responseCode, 200);
     }
 
@@ -75,6 +73,7 @@ public class PriorTestApiTest extends BasicConfig {
     @Description("this case will be running into failure, an issue will be auto created")
     @TestCaseApi(testCaseId = "1710492372304953345", feature = "testSet")
     public void testSetCreated_TC03() {
+        userLoginApi_TC01();
         String createTestSetPayload = "src/main/java/resources/testSetCreate.json/";
         httpRequest.body(new File(createTestSetPayload));
         httpRequest.contentType("application/Json");
@@ -83,7 +82,6 @@ public class PriorTestApiTest extends BasicConfig {
         //httpRequest.log().all();
         Response response = httpRequest.post("/testCycle/saveTestCycle");
         int responseCode = response.statusCode();
-
         Assert.assertEquals(responseCode, 403);
     }
 

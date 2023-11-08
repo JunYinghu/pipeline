@@ -12,7 +12,7 @@ public class BasicConfig {
 
     @Parameters({"testCycle", "enablePriorTestApi", "signOff"})
     @BeforeSuite
-    public void basicConfigParameter(@Optional("") String testCycle, @Optional("true") boolean enablePriorTestApi, @Optional("true") boolean signOff) {
+    public void basicConfigParameter(@Optional("win10_dev_2.0.0") String testCycle, @Optional("true") boolean enablePriorTestApi, @Optional("true") boolean signOff) {
 
         log.info("setup CICD :" + enablePriorTestApi);
 

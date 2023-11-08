@@ -7,7 +7,7 @@
         <classes>
             <class name="test.cicd.project.PriorTestApiTest">
                 <methods>
-                     <include name="$userLoginApi_TC01"/>
+                     <include name="userLoginApi_TC01"/>
                     <include name="createTestCycle_TC02"/>
                     <include name="testSetCreated_TC03"/>
                 </methods>

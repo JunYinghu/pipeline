@@ -5,7 +5,7 @@ import com.priortest.config.PTConstant;
 public class PriorTestConfig {
 
     public static void setPriorTestApi() {
-        PTConstant.setPTBasedURI("http://43.139.159.146:8082/api");
+        PTConstant.setPTBasedURI("http://43.139.159.146:8082/api/apiAdpater/");
     }
 
     public static void setPriorTestProjectId() {

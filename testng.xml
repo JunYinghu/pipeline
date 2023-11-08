@@ -5,9 +5,8 @@
     <listeners>
         <listener class-name="com.priortest.api.ConnectAPIListener"/>
     </listeners>
-    <parameter name="testCycle" value="tesitng testcycle"/>
-
-    <parameter name="$enablePriorTestApi" value="true"/>
+    <parameter name="testCycle" value="自动创建自动化测试周期"/>
+    <parameter name="enablePriorTestApi" value="true"/>
     <parameter name="Env" value="STG"/>
     <parameter name="SignOff" value="true"/>
 

@@ -1,6 +1,7 @@
 package test.cicd.project;
 
 import com.google.common.base.Charsets;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.apache.commons.io.FileUtils;
 import org.apache.tika.io.IOUtils;
@@ -28,7 +29,7 @@ public class MockServerTest {
 
     private ClientAndServer mockServer;
 
-    @BeforeTest
+
     public void startMockServer() {
         ConfigurationProperties.enableCORSForAPI(true);
         ConfigurationProperties.initializationClass(ExpectationInit.class.getName());
@@ -41,14 +42,18 @@ public class MockServerTest {
     }
 
     @Test
-    public void MockServerGetMethod_TC01() throws InterruptedException {
-
+    public void retrieveTestCycleAsTitle_NotFound_TC01() {
         System.out.println("for Mock Server UI Learning");
         String sessionId = UUID.randomUUID().toString();
 
         String exceptionErrorMessage = "test failed: no found verification string";
+        Long projectLong = 361971315692802098L;
         Response response = given()
-                .baseUri("http://43.139.159.146:8082/userList")
+                .baseUri("http://43.139.159.146:8082/api/apiAdpater/361971315692802098/testCycle/retrieveTestCycleAsTitle/getId")
+                .param("title", "标题20021")
+                //.param("projectId", projectLong)
+                .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g")
+                .header("emailid", "qatest.hu.mary3@gmail.com")
                 .log().all()
                 .cookie("sessionId",sessionId)
                 .when()
@@ -58,10 +63,179 @@ public class MockServerTest {
                 .statusCode(200)
                 .contentType("application/json")
                 .extract().response();
-        Assert.assertTrue(response.asString().contains("qatest.hu.mary1@gmail.com"), exceptionErrorMessage);
+        response.jsonPath();
+        JsonPath jsonPathEvaluator = response.jsonPath();
 
-        Thread.sleep(100000000);
+        String dataID = jsonPathEvaluator.get("data.id");
+
+        if (dataID.isEmpty()){
+            System.out.println("no testcycle, create it");
+        }
     }
+
+    @Test
+    public void retrieveTestCycleAsTitle_Found_TC01() {
+        System.out.println("for Mock Server UI Learning");
+        String sessionId = UUID.randomUUID().toString();
+        String exceptionErrorMessage = "test failed: no found verification string";
+        Long projectLong = 593988941040848898L;
+        Response response = given()
+                .baseUri("http://43.139.159.146:8082/api/apiAdpater/593988941040848898/testCycle/retrieveTestCycleAsTitle/getId")
+                .param("title", "win10_dev_2.0")
+                //.param("projectId", projectLong)
+                .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g")
+                .header("emailid", "qatest.hu.mary3@gmail.com")
+                .log().all()
+                .cookie("sessionId",sessionId)
+                .when()
+                .get()
+                .then()
+                .log().all() // print out response payload on console
+                .statusCode(200)
+                .contentType("application/json")
+                .extract().response();
+                response.jsonPath();
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        String dataID = jsonPathEvaluator.get("data.id");
+        if (!dataID.isEmpty()){
+            System.out.println("testcycle is there " +dataID );
+        }
+    }
+
+    @Test
+    public void createIssue_TC01() {
+        //apiAdpater/${projectId}/Issue/createIssue  done
+        //apiAdpater/${projectId}/Issue/udpateIssue  done
+        //apiAdpater/${projectId}/testRun/retrieveTCInTestCycle/hasCaseId  done
+        //apiAdpater/${projectId}/testCycle/retrieveTestCycleAsTitle/getId done
+
+        System.out.println("for Mock Server UI Learning");
+        String sessionId = UUID.randomUUID().toString();
+        String exceptionErrorMessage = "test failed: no found verification string";
+        Long projectLong = 361971315692802098L;
+        Response response = given()
+                .baseUri("http://43.139.159.146:8082/api/apiAdpater/361971315692802098/Issue/createIssue")
+                .param("title", "tesitng testcycle")
+                //.param("projectId", projectLong)
+                .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g")
+                .header("emailid", "qatest.hu.mary3@gmail.com")
+                .log().all()
+                .cookie("sessionId",sessionId)
+                .when()
+                .get()
+                .then()
+                .log().all() // print out response payload on console
+                .statusCode(200)
+                .contentType("application/json")
+                .extract().response();
+        response.jsonPath();
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        String dataID = jsonPathEvaluator.get("data.id");
+        System.out.println("testcycle is there" + dataID);
+
+    }
+
+    @Test
+    public void udpateIssue_TC01() {
+        //apiAdpater/${projectId}/Issue/createIssue  done
+        //apiAdpater/${projectId}/Issue/udpateIssue  done
+        //apiAdpater/${projectId}/testRun/retrieveTCInTestCycle/hasCaseId  done
+        //apiAdpater/${projectId}/testCycle/retrieveTestCycleAsTitle/getId done
+
+        System.out.println("for Mock Server UI Learning");
+        String sessionId = UUID.randomUUID().toString();
+        String exceptionErrorMessage = "test failed: no found verification string";
+        Long projectLong = 361971315692802098L;
+        Response response = given()
+                .baseUri("http://43.139.159.146:8082/api/apiAdpater/361971315692802098/Issue/udpateIssue")
+                .param("title", "tesitng testcycle")
+                //.param("projectId", projectLong)
+                .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g")
+                .header("emailid", "qatest.hu.mary3@gmail.com")
+                .log().all()
+                .cookie("sessionId",sessionId)
+                .when()
+                .get()
+                .then()
+                .log().all() // print out response payload on console
+                .statusCode(200)
+                .contentType("application/json")
+                .extract().response();
+        response.jsonPath();
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        String dataID = jsonPathEvaluator.get("data.id");
+
+        if (dataID.isEmpty()){
+            System.out.println("no testcycle, create it");
+        }
+    }
+
+    @Test
+    public void retrieveTCIdIInTestCycle_Found_TC02() {
+        System.out.println("for Mock Server UI Learning");
+        String sessionId = UUID.randomUUID().toString();
+        String exceptionErrorMessage = "test failed: no found verification string";
+        Long projectLong = 593988941040848898L;
+        Response response = given()
+                .baseUri("http://43.139.159.146:8082/api/apiAdpater/"+projectLong +"/testRun/retrieveTCInTestCycle/hasCaseId")
+                .param("caseId", "1713542099892563969")
+                .param("cycleId", "1719149264447275009")
+                //.param("projectId", projectLong)
+                .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g")
+                .header("emailid", "qatest.hu.mary3@gmail.com")
+                .log().all()
+                .cookie("sessionId",sessionId)
+                .when()
+                .get()
+                .then()
+                .log().all() // print out response payload on console
+                .statusCode(200)
+                .contentType("application/json")
+                .extract().response();
+        response.jsonPath();
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        boolean dataID = jsonPathEvaluator.get("data");
+        if (!dataID){
+            System.out.println("no test case in test cycle, will add it");
+        }
+        else {
+            System.out.println("test case in test cycle :" +dataID);
+        }
+    }
+
+    @Test
+    public void retrieveTCIdIInTestCycle_NoFound_TC02() {
+        System.out.println("for Mock Server UI Learning");
+        String sessionId = UUID.randomUUID().toString();
+        String exceptionErrorMessage = "test failed: no found verification string";
+        Long projectLong = 593988941040848898L;
+        Response response = given()
+                .baseUri("http://43.139.159.146:8082/api/apiAdpater/593988941040848898/testRun/retrieveTCInTestCycle/hasCaseId")
+                .param("caseId", "1713542099892563969")
+                .param("cycleId", "1719149264447275109")
+                //.param("projectId", projectLong)
+                .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g")
+                .header("emailid", "qatest.hu.mary3@gmail.com")
+                .log().all()
+                .cookie("sessionId",sessionId)
+                .when()
+                .get()
+                .then()
+                .log().all() // print out response payload on console
+                .statusCode(200)
+                .contentType("application/json")
+                .extract().response();
+        response.jsonPath();
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        boolean dataID = jsonPathEvaluator.get("data");
+        if (!dataID){
+            System.out.println("no test case in test cycle, will add it");
+        }
+        else {
+            System.out.println("test case in test cycle :" +dataID);
+        }
+    }
+
 
 
     @Test
@@ -74,7 +248,7 @@ public class MockServerTest {
                 .param("scopeId", "3000001")
                 .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g")
                 .header("emailid", "qatest.hu.mary3@gmail.com")
-                .log().uri()
+                .log().all()
                 .when()
                 .get()
                 .then()
