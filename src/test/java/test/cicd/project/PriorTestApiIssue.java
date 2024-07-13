@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.util.HashMap;
 
 public class PriorTestApiIssue {
 
@@ -24,12 +25,10 @@ public class PriorTestApiIssue {
     public void basicSetup() {
         RestAssured.baseURI = "http://43.139.159.146:8082/api";
         httpRequest = RestAssured.given();
-
     }
 
     @Test
     @Description()
-    @TestCaseApi(testCaseId = "TC01", feature = "Skip")
     public void skipTest_TC01() {
         if (testRunFlag = false) {
             throw new SkipException("Skipping Test 1 as flag is false.");
@@ -37,6 +36,8 @@ public class PriorTestApiIssue {
         String exceptionErrorMessage = "test failed: token not obtained";
         String loginPayloadPath = "src/main/java/resources/login.json/";
         httpRequest.body(new File(loginPayloadPath));
+
+
         httpRequest.contentType("application/json");
         httpRequest.log().all();
         Response response = httpRequest.post("/login");

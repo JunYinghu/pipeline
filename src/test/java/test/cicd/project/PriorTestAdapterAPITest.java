@@ -2,6 +2,10 @@ package test.cicd.project;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.util.UUID;
@@ -108,6 +112,19 @@ public class PriorTestAdapterAPITest {
         }
     }
 
+    @AfterMethod
+    protected void afterMethod(ITestResult result, ITestContext testContext) {
+        if (result.getStatus() == ITestResult.SUCCESS) {
+            System.out.println("sdljflasdjflds");
+
+            int aaa = result.getStatus();
+            System.out.println(result.getStatus());
+            //do something in case of fail
+        } else {
+            //do something else for success
+        }
+    }
+
     @Test
     public void retrieveTCIdIInTestCycle_NoFound_TC02() {
         System.out.println("for Mock Server UI Learning");
@@ -116,12 +133,11 @@ public class PriorTestAdapterAPITest {
         Long projectLong = 593988941040848898L;
         Response response = given().baseUri("http://43.139.159.146:8082/api/apiAdpater/593988941040848898/testRun/retrieveTCInTestCycle/getCaseId")
                 .param("testCaseId", "1713542099892563969").param("testCycleId", "1719149264447275109")
-
                 .header("Authorization", "7d585s07pc6t3hcxsf32w827gjqsyizh9959750sqbck2p088g").header("emailid", "qatest.hu.mary3@gmail.com").log().all().cookie("sessionId", sessionId).when().get().then().log().all() // print out response payload on console
                 .statusCode(200).contentType("application/json").extract().response();
         response.jsonPath();
         JsonPath jsonPathEvaluator = response.jsonPath();
-        String dataID = jsonPathEvaluator.get("data");
+        String dataID = jsonPathEvaluator.get("data.id");
         if (dataID.isEmpty()) {
             System.out.println("no test case in test cycle, will add it");
         } else {

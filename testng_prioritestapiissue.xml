@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="PriorTest ApiTest Issue">
 
-    <test name="PriorTestApiIssue">
+    <test name="PriorTestAdapterAPITest">
 
         <classes>
-            <class name="test.cicd.project.PriorTestApiIssue">
+            <class name="test.cicd.project.PriorTestAdapterAPITest">
                 <methods>
-                    <include name="skipTest_TC01"/>
+                    <include name="retrieveTCIdIInTestCycle_NoFound_TC02"/>
                 </methods>
             </class>
         </classes>

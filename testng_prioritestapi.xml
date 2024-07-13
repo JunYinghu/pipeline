@@ -5,11 +5,11 @@
     <test name="PriorTestApiTest">
 
         <classes>
-            <class name="test.cicd.project.PriorTestApiTest">
+            <class name="test.cicd.project.priorTestAdapter.PriorTestApiTest">
                 <methods>
-                     <include name="userLoginApi_TC01"/>
-                    <include name="createTestCycle_TC02"/>
-                    <include name="testSetCreated_TC03"/>
+                     <include name="createIssue_FAIL_TC02"/>
+                    <include name="userLoginApi_testCaseCreate_Pass_TC01"/>
+                    <include name="closeIssue_PASS_TC04"/>
                 </methods>
             </class>
         </classes>

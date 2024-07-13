@@ -3,17 +3,25 @@
 <suite name="PriorTest API Testing Suite">
 
     <listeners>
-        <listener class-name="com.priortest.api.ConnectAPIListener"/>
+        <listener class-name="com.priortest.api.PTAPIAdapter"/>
     </listeners>
-    <parameter name="testCycle" value="自动创建自动化测试周期"/>
-    <parameter name="enablePriorTestApi" value="true"/>
-    <parameter name="Env" value="STG"/>
-    <parameter name="SignOff" value="true"/>
+
+    <parameter name="enablePTApi" value="true"/>
+    <parameter name="ptProjectId" value="755544662432813056"/>
+    <parameter name="ptBaseEndPoint" value="http://43.139.159.146:8082/api/apiAdpater/"/>
+    <parameter name="ptUserToken" value="dgwoekm04xyljrhpvdutmj681pmqzdodn5b2uy6r787llo2gpc"/>
+    <parameter name="ptUserEmail" value="qatest.hu.mary3@gmail.com"/>
+    <parameter name="testCycle" value="周期测试移除-win"/>
+    <parameter name="Env" value="开发"/>
+    <parameter name="version" value="3.0.0.0"/>
+    <parameter name="signOff" value="true"/>
+    <parameter name="release" value="0"/>
+    <parameter name="currentRelease" value="0"/>
+    <parameter name="platform" value="Win"/>
+    <parameter name="issueDealWith" value="true"/>
 
     <suite-files>
-
         <suite-file path="testng_prioritestapi.xml"/>
         <!--<suite-file path="testng_prioritestapiissue.xml"/>-->
-
     </suite-files>
 </suite>
