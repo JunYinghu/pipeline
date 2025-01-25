@@ -4,8 +4,6 @@ import com.priortest.config.PTApiConfig;
 import com.priortest.config.PTApiFieldSetup;
 import com.priortest.config.PTApiPayloadConfig;
 import com.priortest.config.PTConstant;
-
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,9 +13,11 @@ import java.util.Map;
 public class PayloadUtility {
 
 
-    public JSONObject customFiledData(Map<String, String> custom){
+    FieldsSetup FieldSetup = new FieldsSetup();
+
+    public JSONObject customFiledData(Map<String, String> custom) {
         JSONObject customFieldDatas = new JSONObject();
-        for (Map.Entry<String,String> entry : custom.entrySet()){
+        for (Map.Entry<String, String> entry : custom.entrySet()) {
             try {
                 customFieldDatas.put(entry.getKey(), entry.getValue());
             } catch (JSONException e) {
@@ -26,58 +26,59 @@ public class PayloadUtility {
         }
         return customFieldDatas;
     }
-    FieldsSetup FieldsSetup = new FieldsSetup();
-    public void tcPayload(String externalId){
-        FieldsSetup.externalLinkId(externalId);
-        FieldsSetup.title(PTApiFieldSetup.getTitle());
-        FieldsSetup.feature(PTApiFieldSetup.getFeature());
-        FieldsSetup.testModule("自动化");
-        FieldsSetup.testStatus("已评审");
-        FieldsSetup.projectId(PTConstant.getPTProjectId());
-        FieldsSetup.description("THIS IS payload from AUTOMATION test case given via test case");
-        FieldsSetup.version(PTConstant.getPTVersion());
-        FieldsSetup.caseCategory("功能");
-        FieldsSetup.priority("高");
-        FieldsSetup.reportTo("huju");
-        FieldsSetup.testData("tet data");
-        FieldsSetup.testMethod("自动化");
-        FieldsSetup.env(PTConstant.getPTEnv());
-        FieldsSetup.testType("正向");
-        FieldsSetup.testDevice(PTConstant.getPTPlatform());
-        FieldsSetup.platform(PTConstant.getPTPlatform());
-        FieldsSetup.browser("Chrome");
-        FieldsSetup.testCondition("");
-        FieldsSetup.remarks("testing only");
+
+    public void tcPayload(String externalId) {
+        FieldSetup.externalLinkId(externalId);
+        FieldSetup.title(PTApiFieldSetup.getTitle());
+        FieldSetup.feature(PTApiFieldSetup.getFeature());
+        FieldSetup.testModule(PTApiFieldSetup.getModule());
+        FieldSetup.testStatus("已评审");
+        FieldSetup.projectId(PTConstant.getPTProjectId());
+        FieldSetup.description("THIS IS payload from AUTOMATION test case given via test case");
+        FieldSetup.version(PTConstant.getPTVersion());
+        FieldSetup.caseCategory(PTApiFieldSetup.getCategory());
+        FieldSetup.priority(PTApiFieldSetup.getPriority());
+        FieldSetup.severity(PTApiFieldSetup.getSeverity());
+        FieldSetup.reportTo("huju");
+        FieldSetup.testData("tet data");
+        FieldSetup.testMethod("自动");
+        FieldSetup.env(PTConstant.getPTEnv());
+        FieldSetup.testType("正向");
+        FieldSetup.testDevice(PTConstant.getPTPlatform());
+        FieldSetup.platform(PTConstant.getPTPlatform());
+        FieldSetup.browser("Chrome");
+        FieldSetup.testCondition("");
+        FieldSetup.remarks("testing only");
         Map<String, String> custom = new HashMap<>();
-        FieldsSetup.customFieldDatas(customFiledData(custom));
-        //PTApiPayloadConfig ptApiPayload = new PTApiPayloadConfig();
+        FieldSetup.customFieldDatas(customFiledData(custom));
         PTApiPayloadConfig.setTestCasePayload(testCaseCreationPayload());
         System.out.println("+++++++++++++ this print from test case: " + PTApiPayloadConfig.getTestCasePayload());
     }
-    public String testCaseCreationPayload(){
+
+    public String testCaseCreationPayload() {
         JSONObject createTc = new JSONObject();
         try {
-            createTc.put("externalLinkId", FieldsSetup.externalLinkId());
-            createTc.put("title", FieldsSetup.title());
-            createTc.put("feature", FieldsSetup.feature());
-            createTc.put("module", FieldsSetup.testModule());
-            createTc.put("testStatus", FieldsSetup.testStatus());
-            createTc.put("projectId", FieldsSetup.projectId());
-            createTc.put("description",FieldsSetup.description());
-            createTc.put("version",FieldsSetup.version());
-            createTc.put("caseCategory",FieldsSetup.caseCategory());
-            createTc.put("priority",FieldsSetup.priority());
-            createTc.put("reportTo", FieldsSetup.reportTo());
-            createTc.put("testData", FieldsSetup.testData());
-            createTc.put("testMethod", FieldsSetup.testMethod());
-            createTc.put("env", FieldsSetup.env());
-            createTc.put("testType", FieldsSetup.testType());
-            createTc.put("device",FieldsSetup.testDevice());
-            createTc.put("platform",FieldsSetup.platform());
-            createTc.put("browser", FieldsSetup.browser());
-            createTc.put("testCondition", FieldsSetup.testCondition());
-            createTc.put("remarks", FieldsSetup.remarks());
-            createTc.put("customFieldDatas", FieldsSetup.customFieldDatas());
+            createTc.put("externalLinkId", FieldSetup.externalLinkId());
+            createTc.put("title", FieldSetup.title());
+            createTc.put("feature", FieldSetup.feature());
+            createTc.put("module", FieldSetup.testModule());
+            createTc.put("testStatus", FieldSetup.testStatus());
+            createTc.put("projectId", FieldSetup.projectId());
+            createTc.put("description", FieldSetup.description());
+            createTc.put("version", FieldSetup.version());
+            createTc.put("caseCategory", FieldSetup.caseCategory());
+            createTc.put("priority", FieldSetup.priority());
+            createTc.put("reportTo", FieldSetup.reportTo());
+            createTc.put("testData", FieldSetup.testData());
+            createTc.put("testMethod", FieldSetup.testMethod());
+            createTc.put("env", FieldSetup.env());
+            createTc.put("testType", FieldSetup.testType());
+            createTc.put("device", FieldSetup.testDevice());
+            createTc.put("platform", FieldSetup.platform());
+            createTc.put("browser", FieldSetup.browser());
+            createTc.put("testCondition", FieldSetup.testCondition());
+            createTc.put("remarks", FieldSetup.remarks());
+            createTc.put("customFieldDatas", FieldSetup.customFieldDatas());
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
@@ -85,67 +86,71 @@ public class PayloadUtility {
     }
 
 
-
-    public String issuePayload(){
+    public JSONObject issueCreationPayload() {
         JSONObject createIssue = new JSONObject();
         try {
-            createIssue.put("runcaseId", FieldsSetup.externalLinkId());
-            createIssue.put("verifiedResult", FieldsSetup.verifiedResult());
-            createIssue.put("planFixDate", FieldsSetup.planFixDate());
-            createIssue.put("severity", FieldsSetup.severity());
-            createIssue.put("issueVersion", FieldsSetup.version());
-            createIssue.put("fixVersion", FieldsSetup.fixVersion());
-
-            createIssue.put("title", FieldsSetup.title());
-            createIssue.put("feature", FieldsSetup.feature());
-            createIssue.put("issueStatus", FieldsSetup.testStatus());
-            createIssue.put("projectId", FieldsSetup.projectId());
-            createIssue.put("description",FieldsSetup.description());
-            createIssue.put("caseCategory",FieldsSetup.caseCategory());
-            createIssue.put("priority",FieldsSetup.priority());
-            createIssue.put("reportTo", FieldsSetup.reportTo());
-            createIssue.put("fixVersion", FieldsSetup.testMethod());
-            createIssue.put("env", FieldsSetup.env());
-            createIssue.put("testType", FieldsSetup.testType());
-            createIssue.put("testDevice",FieldsSetup.testDevice());
-            createIssue.put("platform",FieldsSetup.platform());
-            createIssue.put("browser", FieldsSetup.browser());
-            createIssue.put("remarks", FieldsSetup.remarks());
-            createIssue.put("customFieldDatas", FieldsSetup.customFieldDatas());
+            createIssue.put("runcaseId", FieldSetup.runCaseId());
+            createIssue.put("verifiedResult", FieldSetup.verifiedResult());
+            createIssue.put("planFixDate", FieldSetup.planFixDate());
+            createIssue.put("severity", FieldSetup.severity());
+            createIssue.put("issueVersion", FieldSetup.version());
+            createIssue.put("fixVersion", FieldSetup.fixVersion());
+            createIssue.put("title", FieldSetup.title());
+            createIssue.put("feature", FieldSetup.feature());
+            createIssue.put("issueStatus", FieldSetup.testStatus());
+            createIssue.put("projectId", FieldSetup.projectId());
+            createIssue.put("description", FieldSetup.description());
+            createIssue.put("caseCategory", FieldSetup.caseCategory());
+            createIssue.put("priority", FieldSetup.priority());
+            createIssue.put("reportTo", FieldSetup.reportTo());
+            createIssue.put("env", FieldSetup.env());
+            createIssue.put("testType", FieldSetup.testType());
+            createIssue.put("testDevice", FieldSetup.testDevice());
+            createIssue.put("platform", FieldSetup.platform());
+            createIssue.put("browser", FieldSetup.browser());
+            createIssue.put("remarks", FieldSetup.remarks());
+            createIssue.put("customFieldDatas", FieldSetup.customFieldDatas());
 
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
-        return createIssue.toString();
+        return createIssue;
     }
 
 
-    public void issueCreationPayload(String title){
-        FieldsSetup.verifiedResult("");
-        FieldsSetup.planFixDate("");
-        FieldsSetup.severity("严重");
-        FieldsSetup.version(PTConstant.getPTVersion());
-        FieldsSetup.fixVersion("");
+    public void issuePayload(String title) {
+        FieldSetup.verifiedResult("");
+        FieldSetup.planFixDate(PTApiFieldSetup.getPlanFixDate());
+        FieldSetup.severity(PTApiFieldSetup.getSeverity());
+        FieldSetup.version(PTConstant.getPTVersion());
+        FieldSetup.fixVersion(PTConstant.getPTVersion());
+        FieldSetup.title(title);
+        FieldSetup.feature(PTApiFieldSetup.getFeature());
+        FieldSetup.testStatus("新建");
+        FieldSetup.projectId(PTConstant.getPTProjectId());
+        FieldSetup.description(PTApiFieldSetup.getFailureMessage());
+        FieldSetup.caseCategory(PTApiFieldSetup.getCategory());
+        FieldSetup.priority(PTApiFieldSetup.getPriority());
+        FieldSetup.reportTo("huju");
+        FieldSetup.testMethod("自动");
+        FieldSetup.env(PTConstant.getPTEnv());
+        FieldSetup.testType("负向");
+        FieldSetup.testDevice(PTConstant.getPTPlatform());
+        FieldSetup.platform(PTConstant.getPTPlatform());
+        FieldSetup.browser("Chrome");
+        FieldSetup.remarks("testing text from test case running");
 
-        FieldsSetup.title(title);
-        FieldsSetup.feature("feature");
-        FieldsSetup.testStatus("已评审");
-        FieldsSetup.projectId(PTConstant.getPTProjectId());
-        FieldsSetup.description("THIS IS FROM AUTOMATION");
-        FieldsSetup.caseCategory("功能");
-        FieldsSetup.priority("高");
-        FieldsSetup.reportTo("huju");
-        FieldsSetup.testMethod("自动化");
-        FieldsSetup.env(PTConstant.getPTEnv());
-        FieldsSetup.testType("正向");
-        FieldsSetup.testDevice(PTConstant.getPTPlatform());
-        FieldsSetup.platform(PTConstant.getPTPlatform());
-        FieldsSetup.browser("Chrome");
+        FieldSetup.duration( PTApiFieldSetup.getDuration());
+        FieldSetup.userImpact( PTApiFieldSetup.getUserImpact());
+        FieldSetup.fixCategory( PTApiFieldSetup.getFixCategory());
+        FieldSetup.rootcauseCategory(PTApiFieldSetup.getRootcauseCategory());
+        FieldSetup.rootCause( PTApiFieldSetup.getRootCause());
+        FieldSetup.frequency( PTApiFieldSetup.getFrequency());
+        FieldSetup.issueSource( PTApiFieldSetup.getIssueSource());
 
-        FieldsSetup.remarks("testing only");
         Map<String, String> custom = new HashMap<>();
-        FieldsSetup.customFieldDatas(customFiledData(custom));
-        PTApiPayloadConfig.getIssuePayload(issuePayload());
-
+        FieldSetup.customFieldDatas(customFiledData(custom));
+        PTApiPayloadConfig.setIssuePayloadAsJson(issueCreationPayload());
+        System.out.println("==================="+ issueCreationPayload().toString());
     }
 }

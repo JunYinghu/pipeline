@@ -4,24 +4,22 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="test priortest API">
-      <change afterPath="$PROJECT_DIR$/src/main/java/payload/FieldsSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/payload/PayloadFieldSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/payload/PayloadUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/mockGraphQL/GraphQLHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/mockGraphQL/GraphQLTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/mockGraphQL/MockGraphQLServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/priorTestAdapter/PriorTestApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/testNewAdapter.java" afterDir="false" />
+    <list default="true" id="4976d370-ef99-49c9-b6c2-468c86468199" name="Default Changelist" comment="1. u">
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/definations/StepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/features/IssueFeatue.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/features/testCaseFeature.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-test-sources/test-annotations/test/cicd/project/definations/IssueStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-test-sources/test-annotations/test/cicd/project/definations/TestStepdefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Config/BasicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConfigUtil/BasicConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Config/PriorTestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConfigUtil/PriorTestConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/PriorTestAdapterAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/PriorTestAdapterAPITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/PriorTestApiIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/PriorTestApiIssue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/PriorTestApiTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng_prioritestapi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_prioritestapi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConfigUtil/BasicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConfigUtil/BasicConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConfigUtil/PriorTestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConfigUtil/PriorTestConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/payload/FieldsSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/payload/FieldsSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/payload/PayloadUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/payload/PayloadUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/MockServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/MockServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/PriorTestAdapterAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/PriorTestAPI/IssueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/mockGraphQL/MockGraphQLServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/mockGraphQL/MockGraphQLServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/cicd/project/priorTestAdapter/PriorTestApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/cicd/project/priorTestAdapter/PriorTestApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng_prioritestapiissue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_prioritestapiissue.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -203,13 +202,16 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;D:/PriorTest/PriorTestAPIAdapter&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/.m2/repository/com/priortest/api/priorTest_api_adapter/1.0-SNAPSHOT/priorTest_api_adapter-1.0-SNAPSHOT.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="test.cicd.project.definations" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ideaProjects\github\pipeline" />
       <recent name="D:\ideaProjects\github\pipeline\src\main\java\resources" />
@@ -222,22 +224,65 @@
       <recent name="D:\pipeline\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test.cicd.project.priorTestAdapter" />
+      <recent name="test.cicd.project.PriorTestAPI" />
       <recent name="payload" />
       <recent name="test.cicd.project" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PriorTestApiTest.creationTestCycle_PASS_TC03">
-    <configuration name="D:/ideaProjects/github/pipeline/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.MockGraphQLServer">
+    <configuration name="MockGraphQLServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.cicd.project.mockGraphQL.MockGraphQLServer" />
       <module name="TestForCICD" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.cicd.project.mockGraphQL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PriorTestApiTest.createIssue_FAIL_TC02" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: IssueFeatue" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/test/cicd/project/features/IssueFeatue.feature" />
+      <option name="GLUE" value="test.cicd.project.definations" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="TestForCICD" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: IssueFeatue" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: testCaseFeature" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/test/cicd/project/features/testCaseFeature.feature" />
+      <option name="GLUE" value="test.cicd.project.definations" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="TestForCICD" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: testCaseFeature" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PriorTestApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestForCICD" />
       <extension name="coverage">
         <pattern>
@@ -247,61 +292,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="test.cicd.project.priorTestAdapter" />
       <option name="MAIN_CLASS_NAME" value="test.cicd.project.priorTestAdapter.PriorTestApiTest" />
-      <option name="METHOD_NAME" value="createIssue_FAIL_TC02" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PriorTestApiTest.creationTestCycle_PASS_TC03" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="testCaseTest.testCase_05" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TestForCICD" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.cicd.project.priorTestAdapter.*" />
+          <option name="PATTERN" value="test.cicd.project.PriorTestAPI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.cicd.project.priorTestAdapter" />
-      <option name="MAIN_CLASS_NAME" value="test.cicd.project.priorTestAdapter.PriorTestApiTest" />
-      <option name="METHOD_NAME" value="creationTestCycle_PASS_TC03" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PriorTestApiTest.userLoginApi_PASS_TC01" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestForCICD" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.cicd.project.priorTestAdapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.cicd.project" />
-      <option name="MAIN_CLASS_NAME" value="test.cicd.project.priorTestAdapter.PriorTestApiTest" />
-      <option name="METHOD_NAME" value="userLoginApi_PASS_TC01" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PriorTestApiTest.userLoginApi_PASS_TC02" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TestForCICD" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.cicd.project.priorTestAdapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.cicd.project.priorTestAdapter" />
-      <option name="MAIN_CLASS_NAME" value="test.cicd.project.priorTestAdapter.PriorTestApiTest" />
-      <option name="METHOD_NAME" value="userLoginApi_PASS_TC02" />
+      <option name="PACKAGE_NAME" value="test.cicd.project.PriorTestAPI" />
+      <option name="MAIN_CLASS_NAME" value="test.cicd.project.PriorTestAPI.testCaseTest" />
+      <option name="METHOD_NAME" value="testCase_05" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -311,11 +319,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PriorTestApiTest.creationTestCycle_PASS_TC03" />
-        <item itemvalue="TestNG.PriorTestApiTest.userLoginApi_PASS_TC01" />
-        <item itemvalue="TestNG.PriorTestApiTest.userLoginApi_PASS_TC02" />
-        <item itemvalue="TestNG.PriorTestApiTest.createIssue_FAIL_TC02" />
-        <item itemvalue="TestNG.D:/ideaProjects/github/pipeline/testng.xml" />
+        <item itemvalue="Application.MockGraphQLServer" />
+        <item itemvalue="TestNG.PriorTestApiTest" />
+        <item itemvalue="Cucumber Java.Feature: testCaseFeature" />
+        <item itemvalue="Cucumber Java.Feature: IssueFeatue" />
+        <item itemvalue="TestNG.testCaseTest.testCase_05" />
       </list>
     </recent_temporary>
   </component>
@@ -674,7 +682,7 @@
       <option name="project" value="LOCAL" />
       <updated>1694265260395</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -722,8 +730,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modification for Link from google to baidu" />
-    <MESSAGE value="modification on Issue from jira-001 to jira-002" />
     <MESSAGE value="modification on verification" />
     <MESSAGE value="modification on test verified page" />
     <MESSAGE value="modification on links" />
@@ -747,7 +753,9 @@
     <MESSAGE value="added PriorTestApiTest" />
     <MESSAGE value="update pom" />
     <MESSAGE value="test priortest API" />
-    <option name="LAST_COMMIT_MESSAGE" value="test priortest API" />
+    <MESSAGE value="1. added GraphQL mock server&#10;2. test priorTestAdapter" />
+    <MESSAGE value="1. delete unuseful file" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. delete unuseful file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -759,7 +767,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ConfigUtil/BasicConfig.java</url>
-          <line>17</line>
+          <line>16</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -774,12 +782,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/test/cicd/project/priorTestAdapter/PriorTestApiTest.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/test/cicd/project/priorTestAdapter/PriorTestApiTest.java</url>
-          <line>96</line>
+          <line>72</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -789,9 +792,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/test/cicd/project/mockGraphQL/MockGraphQLServer.java</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="45" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

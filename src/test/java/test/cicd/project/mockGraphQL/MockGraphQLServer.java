@@ -9,6 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import static graphql.Scalars.GraphQLFloat;
 import static graphql.Scalars.GraphQLString;
 
 public class MockGraphQLServer {
@@ -38,6 +39,8 @@ public class MockGraphQLServer {
                         .name("web").type(GraphQLString))
                 .field(GraphQLFieldDefinition.newFieldDefinition()
                         .name("level").type(GraphQLString))
+                .field(GraphQLFieldDefinition.newFieldDefinition()
+                        .name("visitDate").type(GraphQLFloat))
                 .build();
 
         // define query parameter type
@@ -92,6 +95,7 @@ public class MockGraphQLServer {
                 details.put("name", name);
                 details.put("web", "http://www." + name + ".com");
                 details.put("level", "high, your are allowed to review " + fileName);
+                details.put("visitDate", 17986543000000L);
 
                 staffLevelList.add(details);
             } else {

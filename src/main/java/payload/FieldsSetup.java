@@ -29,6 +29,14 @@ public class FieldsSetup {
     private String severity;
     private String fixVersion;
     private String module;
+    private String runCaseId;
+    private String duration;
+    private String userImpact;
+    private String fixCategory;
+    private String rootcauseCategory;
+    private String rootCause;
+    private String frequency;
+    private String issueSource;
 
     public void version(String version) {
         this.version = version;
@@ -38,6 +46,9 @@ public class FieldsSetup {
         this.externalLinkId = externalLinkId;
     }
 
+    public void runCaseId(String runCaseId) {
+        this.runCaseId = runCaseId;
+    }
     public void title(String title) {
         this.title = title;
     }
@@ -128,6 +139,28 @@ public class FieldsSetup {
 
     public void planFixDate(String planFD) {
         this.planFD = planFD;
+    }
+
+    public void userImpact(String userImpact) {
+        this.userImpact = userImpact;
+    }
+    public void fixCategory(String fixCategory) {
+        this.fixCategory = fixCategory;
+    }
+    public void rootcauseCategory(String rootcauseCategory) {
+        this.rootcauseCategory = rootcauseCategory;
+    }
+    public void rootCause(String rootCause) {
+        this.rootCause = rootCause;
+    }
+    public void frequency(String frequency) {
+        this.frequency = frequency;
+    }
+    public void issueSource(String issueSource) {
+        this.issueSource = issueSource;
+    }
+    public void duration(String duration) {
+        this.duration = duration;
     }
 
     public String version() {
@@ -231,5 +264,31 @@ public class FieldsSetup {
 
     public String fixVersion() {
         return this.fixVersion;
+    }
+
+    public String runCaseId() {
+        return this.runCaseId;
+    }
+
+    public String duration() {
+        return this.duration;
+    }
+    public String userImpact() {
+        return this.userImpact;
+    }
+    public String fixCategory() {
+        return this.fixCategory;
+    }
+    public String rootcauseCategory() {
+        return this.rootcauseCategory;
+    }
+    public String rootCause() {
+        return this.rootCause;
+    }
+    public String frequency() {
+        return this.frequency;
+    }
+    public String issueSource() {
+        return this.issueSource;
     }
 }

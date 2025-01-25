@@ -1,12 +1,11 @@
 package ConfigUtil;
 
-import com.priortest.api.PTAPIAdapter;
 import com.priortest.config.PTApiConfig;
 import com.priortest.config.PTConstant;
-import com.priortest.model.Config;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.*;
+
 
 import java.lang.reflect.Method;
 
@@ -15,8 +14,7 @@ public class BasicConfig {
 
     @Parameters({"testCycle", "enablePTApi", "signOff", "Env", "version", "release", "currentRelease"})
     @BeforeSuite
-    public void basicConfigParameter(@Optional("") String testCycle, @Optional("true") boolean enablePTApi, @Optional("true") boolean signOff
-            , @Optional("开发") String Env, @Optional("3.0.0.0") String version, @Optional("0") int release, @Optional("0") int currentRelease) {
+    public void basicConfigParameter(@Optional("调试 API count") String testCycle, @Optional("true") boolean enablePTApi, @Optional("true") boolean signOff, @Optional("开发") String Env, @Optional("1.0.0.0") String version, @Optional("1") int release, @Optional("1") int currentRelease) {
         log.info("+++++ Setup CICD setting :" + enablePTApi + "  " + testCycle + " " + version + "  " + Env);
         // enablePriorTestApi : true - will trigger PT API
         // false - will not trigger PT API
@@ -38,10 +36,10 @@ public class BasicConfig {
         // setPlatform - String for sign off / create test cycle usage, if not pass, PT detect the platform test case running on
 
         PTApiConfig pTApiConfig = new PTApiConfig();
-        pTApiConfig.setConnectPTAPI(enablePTApi);
-        pTApiConfig.setTestCycleTitle(testCycle);
-        pTApiConfig.setPriorTestRelease(release);
-        pTApiConfig.setPriorTestCurrentRelease(currentRelease);
+        PTApiConfig.setConnectPTAPI(enablePTApi);
+        PTApiConfig.setTestCycleTitle(testCycle);
+        PTApiConfig.setPriorTestRelease(release);
+        PTApiConfig.setPriorTestCurrentRelease(currentRelease);
 
         PriorTestConfig.setPriorTestApi();
         PriorTestConfig.setPriorTestProjectId();
@@ -53,11 +51,21 @@ public class BasicConfig {
         PriorTestConfig.setVersion(version);
         PriorTestConfig.setPriorTestSignOff(signOff);
 
-
+        PTApiConfig.setIssueIdentifier(generateDeviceInfo());
 
         log.info("+++ End Setup CICD ++++ ");
     }
 
+    private String generateDeviceInfo() {
+        // Example implementation: retrieve device or OS from test result attributes or system properties
+        String osName = System.getProperty("os.name");
+        String osVersion = System.getProperty("os.version");
+        String osArch = System.getProperty("os.arch");
+        String version = PTConstant.getPTVersion();
+        String issueIdentifier =version+"_"+(osName != null ? osName : "UnknownDevice") + "_" + (osVersion != null ? osVersion : "UnknownOSVersion") + "_" + (osArch != null ? osArch : "UnKnowsOSarch");
+        return issueIdentifier;
+        //PTApiConfig.setIssueIdentifier(issueIdentifier);
+    }
 
     @AfterMethod
     public void afterTest(Method method) {
@@ -67,5 +75,6 @@ public class BasicConfig {
     @BeforeMethod
     public void beforeTest(Method method) {
         log.info("Start TC " + getClass().getSimpleName() + "." + method.getName());
+
     }
 }

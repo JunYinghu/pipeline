@@ -1,19 +1,20 @@
-package test.cicd.project;
+package test.cicd.project.PriorTestAPI;
 
+import com.priortest.annotation.TestCaseApi;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.util.UUID;
 
 import static io.restassured.RestAssured.given;
 
-public class PriorTestAdapterAPITest {
+public class IssueTest {
     @Test
+    @TestCaseApi(feature = "TestCase", priority = "高", severity = "严重", caseCategory = "功能", automationId = "testCase_05", issueId = {})
     public void retrieveTestCycleAsTitle_NotFound_TC01() {
         System.out.println("for Mock Server UI Learning");
         String sessionId = UUID.randomUUID().toString();

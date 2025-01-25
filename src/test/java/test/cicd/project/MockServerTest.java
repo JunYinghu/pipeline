@@ -1,10 +1,9 @@
 package test.cicd.project;
 
-import com.google.common.base.Charsets;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.apache.commons.io.FileUtils;
-import org.apache.tika.io.IOUtils;
+
 import org.mockserver.configuration.ConfigurationProperties;
 import org.mockserver.integration.ClientAndServer;
 
@@ -13,7 +12,7 @@ import org.mockserver.netty.MockServer;
 import org.mockserver.socket.tls.KeyStoreFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 import test.cicd.project.Utili.ExpectationInit;
 

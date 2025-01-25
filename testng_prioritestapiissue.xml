@@ -5,7 +5,7 @@
     <test name="PriorTestAdapterAPITest">
 
         <classes>
-            <class name="test.cicd.project.PriorTestAdapterAPITest">
+            <class name="test.cicd.project.PriorTestAPI.IssueTest">
                 <methods>
                     <include name="retrieveTCIdIInTestCycle_NoFound_TC02"/>
                 </methods>

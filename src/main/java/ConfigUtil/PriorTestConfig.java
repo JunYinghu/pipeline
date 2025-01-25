@@ -8,11 +8,11 @@ public class PriorTestConfig {
         PTConstant.setPTBasedURI("http://43.139.159.146:8082/api/apiAdpater/");
     }
     public static void setPriorTestProjectId() {
-        PTConstant.setPTProjectId("593988941040848898");
+        PTConstant.setPTProjectId("1868226015180881922");
     }
 
     public static void setPriorTestToken() {
-        PTConstant.setPTToken("dgwoekm04xyljrhpvdutmj681pmqzdodn5b2uy6r787llo2gpc");
+        PTConstant.setPTToken("c4RrlTMj1xLyseUj43GbRnpFgLXKN0ZO4DFsVIBeLRzFx3JfwE");
     }
 
     public static void setPriorTestEmail() {
